@@ -1408,6 +1408,14 @@
                 <a href="https://github.com/touristmap/touristmap.github.io" target="_blank">Made with <i class="icon ion-heart" style="color: #e25555;"></i> in Britain</a>
             </div>
         </div>
+
+	<script>
+	if('serviceWorker' in navigator) {
+	  navigator.serviceWorker
+		   .register('/assets/js/sw.js')
+		   .then(function() { console.log("Service Worker Registered"); });
+	}
+	</script>
     </body>
 
 </html>
