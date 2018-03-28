@@ -204,6 +204,7 @@
                 "BI": visa,
                 "BJ": visa,
                 "BN": no_visa,
+                "BO": no_visa_less_than_one_month,
                 "BR": no_visa,
                 "BS": no_visa_less_than_one_month,
                 "BT": visa,
@@ -1053,6 +1054,8 @@
                         label.html('<div class="map-atooltip">Zimbabwe: You can purchase a visa on arrival.</div>');
                     } else if (code == 'sb') {
                         label.html('<div class="map-atooltip">Soloman Is.: Allowed to stay 90 days without a visa. You need an onward ticket, and sufficient funds to cover your stay.</div>');
+                    } else if (code == 'bo') {
+                        label.html('<div class="map-atooltip">Bolivia: British nationals don\'t need a visa to visit Bolivia. The length of stay permitted on entering Bolivia is initially 30 days. This can be extended for a further 60 days, at no extra charge, as long as you apply before the end of the 30 day period at one of the Department of Immigration offices throughout the country.<br><br>Your passport must contain an entry stamp, otherwise you\'ll have to pay a fine to leave.</div>');
                     } else {
                         label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
                     }
@@ -1375,6 +1378,8 @@
                         window.location = 'https://www.gov.uk/foreign-travel-advice/zimbabwe/entry-requirements';
                     } else if (code == 'sb') {
                         window.location = 'https://www.gov.uk/foreign-travel-advice/solomon-islands/entry-requirements';
+                    } else if (code == 'bo') {
+                        window.location = 'https://www.gov.uk/foreign-travel-advice/bolivia/entry-requirements';
                     }
                 }
             });
