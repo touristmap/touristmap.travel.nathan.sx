@@ -238,6 +238,7 @@
                 "ET": visa_on_arrival,
                 "FI": no_visa,
                 "FJ": no_visa,
+                "FK": no_visa,
                 "FR": no_visa,
                 "GA": visa,
                 "GB": no_visa,
@@ -724,6 +725,12 @@
                 style: {
                     fill: visa_on_arrival
                 }
+            }, {
+                latLng: [-7.3, 72.4],
+                name: 'British Indian Ocean Territory: Access to the British Indian Ocean Territory is restricted and a permit is required in advance of travel. There are no commercial flights and permits for yachts are only issued to allow safe passage through the Indian Ocean (outer islands only). Access to Diego Garcia is only permitted to those with connections either to the military facility or to the Territory\'s Administration.',
+                style: {
+                    fill: visa
+                }
             }];
 
             var markers_count = 0;
@@ -1077,6 +1084,8 @@
                         label.html('<div class="map-atooltip">Bolivia: British nationals don\'t need a visa to visit Bolivia. The length of stay permitted on entering Bolivia is initially 30 days. This can be extended for a further 60 days, at no extra charge, as long as you apply before the end of the 30 day period at one of the Department of Immigration offices throughout the country.<br><br>Your passport must contain an entry stamp, otherwise you\'ll have to pay a fine to leave.</div>');
                     } else if (code == 'cu') {
                         label.html('<div class="map-atooltip">Cuba: Need a visa. If you\'re entering Cuba as a tourist, you\'ll need to get a tourist card before you travel.<br><br>If you\'re a dual national, you should contact the Cuban Embassy for advice on entry requirements before you travel.<br><br>There\'s a mandatory airport tax of 25 Cuban convertible pesos (CUCs). This fee should be included in the cost of your airline ticket. If in doubt, check with your airline.</div>');
+                    } else if (code == 'fk') {
+                        label.html('<div class="map-atooltip">Falkland Islands: British nationals do not need a visa to enter the Falkland Islands, but you may need a visa to transit Chile. There are no facilities to issue Chilean visas on the Falkland Islands. You must have a passport valid for the proposed duration of your stay, a return air ticket (or other evidence of pre‑paid onward travel), evidence of accommodation with family/friends/hotel/business, sufficient funds to cover your stay in the Islands. There is a £22 departure tax on leaving the Islands that is not included on LATAM airline flight tickets.</div>');
                     } else {
                         label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
                     }
