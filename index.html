@@ -312,6 +312,7 @@
         "PH": no_visa_less_than_one_month,
         "PK": visa,
         "PL": no_visa,
+        "PR": visa,
         "PS": visa_on_arrival,
         "PT": no_visa,
         "PY": no_visa,
@@ -1098,6 +1099,8 @@
             label.html('<div class="map-atooltip">Dominican Republic: British Citizens travelling to the Dominican Republic for tourism don\'t need a visa. On arrival you will normally be granted a 30-day stay. This can be extended to 60 days by paying for an extension when you leave the country. You may be refused entry if you don\'t have proof of onward or return travel. Departure tax is US$20. Scheduled airlines often include this charge in the price of the ticket. Check with your tour operator or travel provider.</div>');
           } else if (code == 'us') {
             label.html('<div class="map-atooltip">USA: Most passport holders can get an Electronic System for Travel Authorisation (ESTA) through the Visa Waiver Programme, which allows travel to the US for up to 90 days. If you\'re arriving by land or on a ferry from Vancouver or Victoria in Canada, you don\'t need to complete an ESTA before you arrive at the border. If you don\'t qualify for entry under the VWP, and don\'t have a US Permanent Resident Card, you should apply for a visa from the nearest US Embassy or Consulate before travelling.</div>');
+          } else if (code == 'pr') {
+            label.html('<div class="map-atooltip">Puerto Rico: Puerto Rico is an unincorporated territory of the United States. Please see travel advice for the USA.</div>');
           } else {
             label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
           }
@@ -1432,7 +1435,7 @@
             window.location = 'https://www.gov.uk/foreign-travel-advice/kosovo/entry-requirements';
           } else if (code == 'do') {
             window.location = 'https://www.gov.uk/foreign-travel-advice/dominican-republic/entry-requirements';
-          } else if (code == 'us') {
+          } else if (code == 'us' || code == 'pr') {
             window.location = 'https://www.gov.uk/foreign-travel-advice/usa/entry-requirements';
           }
         }
