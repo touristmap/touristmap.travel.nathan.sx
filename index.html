@@ -1,1470 +1,1470 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>British Citizen Tourist Map</title>
-    <meta name="description" content="A map of entry requirements for British citizens who want to travel the world.">
+  <title>British Citizen Tourist Map</title>
+  <meta name="description" content="A map of entry requirements for British citizens who want to travel the world.">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@britishcitizentouristmap">
-    <meta name="twitter:creator" content="@britishcitizentouristmap">
-    <meta name="twitter:title" content="British Citizen Tourist Map">
-    <meta name="twitter:description" content="A map of entry requirements for British citizens who want to travel the world.">
-    <meta name="twitter:image" content="https://touristmap.github.io/assets/images/twitter/card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@britishcitizentouristmap">
+  <meta name="twitter:creator" content="@britishcitizentouristmap">
+  <meta name="twitter:title" content="British Citizen Tourist Map">
+  <meta name="twitter:description" content="A map of entry requirements for British citizens who want to travel the world.">
+  <meta name="twitter:image" content="https://touristmap.github.io/assets/images/twitter/card.png">
 
-    <link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" sizes="180x180">
-    <link rel="icon" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/assets/images/favicons/manifest.json">
-    <!-- <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#0f2744"> -->
-    <link rel="icon" href="/favicon.png">
-    <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#0f2744">
+  <link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" href="/assets/images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/assets/images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="manifest" href="/assets/images/favicons/manifest.json">
+  <!-- <link rel="mask-icon" href="/assets/images/favicons/safari-pinned-tab.svg" color="#0f2744"> -->
+  <link rel="icon" href="/favicon.png">
+  <meta name="msapplication-config" content="/assets/images/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#0f2744">
 
-    <link rel="stylesheet" href="/assets/css/responsive.css">
-    <link rel="stylesheet" href="/assets/css/jquery-jvectormap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css" integrity="sha256-NBgeI1K43CnPptaOS0A2PfGfTg+8gtmTyDEe7GmiP64=" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/1.3.3/css/ionicons.min.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="/assets/css/jquery-jvectormap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css" integrity="sha256-NBgeI1K43CnPptaOS0A2PfGfTg+8gtmTyDEe7GmiP64=" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/1.3.3/css/ionicons.min.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="/assets/js/jquery-jvectormap-2.0.3.min.js"></script>
-    <script src="/assets/js/jquery-jvectormap-world-mill.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/jquery-jvectormap-2.0.3.min.js"></script>
+  <script src="/assets/js/jquery-jvectormap-world-mill.js"></script>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      background-color: #0f2744;
+      font-size: 16px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    
+    #header {
+      padding: 10px;
+      color: #fff;
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #0a1b2f;
+    }
+    
+    #header-right {
+      float: right;
+    }
+    
+    @media screen and (max-width: 991px) {
+      #header {
+        text-align: center !important;
+      }
+    }
+    
+    #title {
+      font-weight: bold;
+    }
+    
+    #subtitle {
+      font-size: 14px;
+    }
+    
+    @media screen and (min-width: 992px) {
+      #vmap {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 500px !important;
+      }
+    }
+    
+    @media screen and (max-width: 767px) {
+      .jvectormap-zoomin,
+      .jvectormap-zoomout {
+        visibility: hidden;
+        display: none;
+      }
+    }
+    
+    @media screen and (max-width: 767px) and (orientation:landscape) {
+      #header {
+        display: none !important;
+      }
+      #footer {
+        display: none !important;
+      }
+    }
+    
+    #footer {
+      padding: 10px;
+      color: #fff;
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #0a1b2f;
+    }
+    
+    #credit {
+      float: right;
+      margin-right: 20px;
+    }
+    
+    @media screen and (max-width: 1200px) {
+      #credit {
+        float: none;
+        text-align: center;
+        clear: left;
+        padding-top: 5px;
+      }
+    }
+    
+    .square {
+      float: left;
+      width: 20px;
+      height: 20px;
+    }
+    
+    .square-wrapper {
+      float: left;
+    }
+    
+    .square-visa {
+      background-color: #e74c3c;
+    }
+    
+    .square-no-visa {
+      background-color: #2ecc71;
+    }
+    
+    .square-no-visa-less-than-one-month {
+      background-color: #3498db;
+    }
+    
+    .square-visa-on-arrival {
+      background-color: #9b59b6;
+    }
+    
+    #vmap {
+      width: 100%;
+      height: 300px;
+      position: absolute;
+      margin: auto;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+    }
+    
+    #noscript {
+      text-align: center;
+      color: #fff;
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      width: 100%;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      max-width: 100%;
+      max-height: 100%;
+      overflow: auto;
+    }
+  </style>
+
+  <script>
+    $(function() {
+      var no_visa = "#2ecc71";
+      var no_visa_less_than_one_month = "#3498db";
+      var visa = "#e74c3c";
+      var visa_on_arrival = "#9b59b6";
+
+      var data = {
+        "AE": visa_on_arrival,
+        "AF": visa,
+        "AL": no_visa,
+        "AM": no_visa,
+        "AO": visa,
+        "AR": no_visa,
+        "AT": no_visa,
+        "AU": visa,
+        "AZ": visa,
+        "BA": no_visa,
+        "BD": visa_on_arrival,
+        "BE": no_visa,
+        "BF": visa,
+        "BG": no_visa,
+        "BI": visa,
+        "BJ": visa,
+        "BN": no_visa,
+        "BO": no_visa_less_than_one_month,
+        "BR": no_visa,
+        "BS": no_visa_less_than_one_month,
+        "BT": visa,
+        "BW": no_visa,
+        "BY": no_visa_less_than_one_month,
+        "BZ": no_visa_less_than_one_month,
+        "CA": visa,
+        "CD": visa,
+        "CF": visa,
+        "CG": visa,
+        "CH": no_visa,
+        "CI": visa,
+        "CL": no_visa,
+        "CM": visa,
+        "CN": visa,
+        "CO": no_visa,
+        "CR": no_visa,
+        "CU": visa,
+        "CY": no_visa,
+        "CZ": no_visa,
+        "DE": no_visa,
+        "DJ": visa_on_arrival,
+        "DK": no_visa,
+        "DZ": visa,
+        "EC": no_visa,
+        "EE": no_visa,
+        "EG": visa_on_arrival,
+        "EH": no_visa,
+        "ER": visa,
+        "ES": no_visa,
+        "ET": visa_on_arrival,
+        "FI": no_visa,
+        "FJ": no_visa,
+        "FK": no_visa,
+        "FR": no_visa,
+        "GA": visa,
+        "GB": no_visa,
+        "GE": no_visa,
+        "GH": visa,
+        "GL": no_visa,
+        "GM": visa_on_arrival,
+        "GN": visa,
+        "GQ": visa,
+        "GR": no_visa,
+        "GT": no_visa,
+        "GW": visa,
+        "GY": no_visa_less_than_one_month,
+        "HN": no_visa_less_than_one_month,
+        "HR": no_visa,
+        "HT": no_visa,
+        "HU": no_visa,
+        "ID": no_visa_less_than_one_month,
+        "IE": no_visa,
+        "IL": no_visa,
+        "IN": visa,
+        "IQ": visa,
+        "IR": visa,
+        "IS": no_visa,
+        "IT": no_visa,
+        "JM": no_visa,
+        "JP": no_visa,
+        "KE": visa_on_arrival,
+        "KG": no_visa,
+        "KH": visa_on_arrival,
+        "KP": visa,
+        "KR": no_visa,
+        "KW": visa_on_arrival,
+        "KZ": no_visa_less_than_one_month,
+        "LA": visa_on_arrival,
+        "LB": visa_on_arrival,
+        "LK": visa_on_arrival,
+        "LR": visa,
+        "LS": visa_on_arrival,
+        "LT": no_visa,
+        "LU": no_visa,
+        "LV": no_visa,
+        "LY": visa,
+        "MA": no_visa,
+        "MD": no_visa,
+        "ME": no_visa,
+        "MG": visa_on_arrival,
+        "MK": no_visa,
+        "ML": visa,
+        "MM": visa,
+        "MN": visa,
+        "MR": visa_on_arrival,
+        "MT": no_visa,
+        "MW": visa_on_arrival,
+        "MX": no_visa,
+        "MY": no_visa,
+        "NA": no_visa,
+        "NC": no_visa,
+        "NE": visa,
+        "NG": visa,
+        "NI": no_visa,
+        "NL": no_visa,
+        "NO": no_visa,
+        "NP": visa_on_arrival,
+        "NZ": no_visa,
+        "OM": visa_on_arrival,
+        "PA": no_visa,
+        "PE": no_visa,
+        "PG": visa_on_arrival,
+        "PH": no_visa_less_than_one_month,
+        "PK": visa,
+        "PL": no_visa,
+        "PS": visa_on_arrival,
+        "PT": no_visa,
+        "PY": no_visa,
+        "QA": no_visa_less_than_one_month,
+        "RO": no_visa,
+        "RS": no_visa,
+        "RU": visa,
+        "RW": visa_on_arrival,
+        "SA": visa,
+        "SB": no_visa,
+        "SD": visa,
+        "SE": no_visa,
+        "SI": no_visa,
+        "SK": no_visa,
+        "SL": visa,
+        "SN": no_visa,
+        "SO": visa,
+        "SS": visa,
+        "SR": no_visa_less_than_one_month,
+        "SV": no_visa,
+        "SY": visa,
+        "SZ": no_visa_less_than_one_month,
+        "TD": visa,
+        "TG": visa_on_arrival,
+        "TH": no_visa_less_than_one_month,
+        "TL": visa_on_arrival,
+        "TN": no_visa,
+        "TT": no_visa,
+        "TW": no_visa,
+        "UA": no_visa,
+        "UG": visa,
+        "UY": no_visa,
+        "UZ": visa,
+        "VE": no_visa,
+        "VN": no_visa_less_than_one_month,
+        "VU": no_visa_less_than_one_month,
+        "XC": no_visa,
+        "XK": no_visa,
+        "XS": visa,
+        "YE": visa,
+        "ZA": no_visa,
+        "ZW": visa_on_arrival
+      };
+
+      var markers = [{
+        latLng: [41.90, 12.45],
+        name: 'Vatican City: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
         }
-        
-        body {
-            background-color: #0f2744;
-            font-size: 16px;
+      }, {
+        latLng: [43.73, 7.41],
+        name: 'Monaco: Allowed to stay 90 days without a visa. Immigration is handled by France for Monaco.',
+        style: {
+          fill: no_visa
         }
-        
-        a {
-            text-decoration: none;
-            color: #fff;
+      }, {
+        latLng: [-0.52, 166.93],
+        name: 'Nauru: Need a visa.',
+        style: {
+          fill: visa
         }
-        
-        #header {
-            padding: 10px;
-            color: #fff;
-            font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            background-color: #0a1b2f;
+      }, {
+        latLng: [-8.51, 179.21],
+        name: 'Tuvalu: Visas are not required for British nationals visiting for periods of up to one month. An extension of stay for a maximum period of three months is available from the Department of Immigration.',
+        style: {
+          fill: no_visa_less_than_one_month
         }
-        
-        #header-right {
-            float: right;
+      }, {
+        latLng: [43.93, 12.46],
+        name: 'San Marino: You don\'t need a visa to visit San Marino. If you\'re staying in San Marino for less than 30 days in an official residency (ie hotel or bed and breakfast) you don\'t need a \'permesso di soggiorno turistico\'. However, if you\'re staying privately, you\'ll need to report your stay to the Ufficio Stranieri (Foreigners\' Office) of the local Gendarmerie within 24 hours of arrival.',
+        style: {
+          fill: no_visa
         }
-        
-        @media screen and (max-width: 991px) {
-            #header {
-                text-align: center !important;
-            }
+      }, {
+        latLng: [47.14, 9.52],
+        name: 'Liechtenstein: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
         }
-        
-        #title {
-            font-weight: bold;
+      }, {
+        latLng: [7.11, 171.06],
+        name: 'Marshall Islands: Need a visa. A 30-day visit visa is available on arrival at the airport. Those arriving by boat must also obtain a visa. 30-day visit visas may be extended twice, for a maximum stay of 90 days and each extension costs approximately US$10.',
+        style: {
+          fill: visa_on_arrival
         }
-        
-        #subtitle {
-            font-size: 14px;
+      }, {
+        latLng: [17.3, -62.73],
+        name: 'Saint Kitts and Nevis: No visa needed. On entry, you will be granted a specified period to stay.',
+        style: {
+          fill: no_visa
         }
-        
-        @media screen and (min-width: 992px) {
-            #vmap {
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                height: 500px !important;
-            }
+      }, {
+        latLng: [3.2, 73.22],
+        name: 'Maldives: 30 day visa on arrival available provided you hold a valid onward or return ticket and enough funds to cover your stay.',
+        style: {
+          fill: visa_on_arrival
         }
-        
-        @media screen and (max-width: 767px) {
-            .jvectormap-zoomin,
-            .jvectormap-zoomout {
-                visibility: hidden;
-                display: none;
-            }
+      }, {
+        latLng: [35.88, 14.5],
+        name: 'Malta: No visa requirement for British nationals.',
+        style: {
+          fill: no_visa
         }
-        
-        @media screen and (max-width: 767px) and (orientation:landscape) {
-            #header {
-                display: none !important;
-            }
-            #footer {
-                display: none !important;
-            }
+      }, {
+        latLng: [12.05, -61.75],
+        name: 'Grenada: No visa needed. On entry, you will be granted a specified period to stay.',
+        style: {
+          fill: no_visa
         }
-        
-        #footer {
-            padding: 10px;
-            color: #fff;
-            font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: #0a1b2f;
+      }, {
+        latLng: [13.16, -61.23],
+        name: 'Saint Vincent and the Grenadines: No visa needed. On entry, you will be granted a specified period to stay.',
+        style: {
+          fill: no_visa
         }
-        
-        #credit {
-            float: right;
-            margin-right: 20px;
+      }, {
+        latLng: [13.16, -59.55],
+        name: 'Barbados: No visa needed. On entry, you will be granted a specified period to stay.',
+        style: {
+          fill: no_visa
         }
-        
-        @media screen and (max-width: 1200px) {
-            #credit {
-                float: none;
-                text-align: center;
-                clear: left;
-                padding-top: 5px;
-            }
+      }, {
+        latLng: [17.11, -61.85],
+        name: 'Antigua and Barbuda: No visa needed. On entry, you will be granted a specified period to stay.',
+        style: {
+          fill: no_visa
         }
-        
-        .square {
-            float: left;
-            width: 20px;
-            height: 20px;
+      }, {
+        latLng: [-4.61, 55.45],
+        name: 'Seychelles: Although Seychelles is a visa-free country, you must hold an onward or return ticket, have confirmed accommodation, and have sufficient funds for duration of your stay.',
+        style: {
+          fill: no_visa
         }
-        
-        .square-wrapper {
-            float: left;
+      }, {
+        latLng: [7.35, 134.46],
+        name: 'Palau: Visas are not required for British nationals visiting for periods of up to 30 days. Extensions of stay are not automatically granted. On arrival you can ask for entry to be granted for all the time you believe you will need. Consult the Bureau of Immigration before you travel if you are likely to seek an extension of stay.',
+        style: {
+          fill: no_visa_less_than_one_month
         }
-        
-        .square-visa {
-            background-color: #e74c3c;
+      }, {
+        latLng: [42.5, 1.51],
+        name: 'Andorra: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
         }
-        
-        .square-no-visa {
-            background-color: #2ecc71;
+      }, {
+        latLng: [14.01, -60.98],
+        name: 'Saint Lucia: No visa needed. On entry, you will be granted a specified period to stay.',
+        style: {
+          fill: no_visa
         }
-        
-        .square-no-visa-less-than-one-month {
-            background-color: #3498db;
+      }, {
+        latLng: [6.91, 158.18],
+        name: 'Federated States of Micronesia: Tourist/visitor visas are issued on arrival and the duration of stay is authorised for the number of days requested. You may extend your visa by up to 30 days. Subsequent extensions may be granted for another 30 days but the total time of stay shall not exceed 90 days. There is no fee charged for an extension of stay.',
+        style: {
+          fill: no_visa_less_than_one_month
         }
-        
-        .square-visa-on-arrival {
-            background-color: #9b59b6;
+      }, {
+        latLng: [1.3, 103.8],
+        name: 'Singapore: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
         }
-        
-        #vmap {
-            width: 100%;
-            height: 300px;
-            position: absolute;
-            margin: auto;
-            max-width: 100%;
-            max-height: 100%;
-            overflow: auto;
+      }, {
+        latLng: [1.46, 173.03],
+        name: 'Kiribati: Allowed to stay 1 month without a visa provided you hold a return/onward ticket and sufficient funds for your stay. This can be extended on application to the Ministry of Foreign Affairs and Immigration in Bairiki, for additional 1 month periods for a maximum 3 additional months, provided your passport remains valid.',
+        style: {
+          fill: no_visa_less_than_one_month
         }
-        
-        #noscript {
-            text-align: center;
-            color: #fff;
-            font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            width: 100%;
-            height: 100px;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            margin: auto;
-            max-width: 100%;
-            max-height: 100%;
-            overflow: auto;
+      }, {
+        latLng: [-21.13, -175.2],
+        name: 'Tonga: British passport holders visiting Tonga as a tourist or on business are normally given permission to enter the country for up to 30 days. You should be able to provide an onward air or sea ticket, adequate funds and relevant health certificates. If you wish to extend your stay you must obtain permission from the Principal Immigration Officer.',
+        style: {
+          fill: no_visa_less_than_one_month
         }
-    </style>
+      }, {
+        latLng: [15.3, -61.38],
+        name: 'Dominica: No visa needed. On entry, you will be granted a specified period to stay.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-20.2, 57.5],
+        name: 'Mauritius: Allowed to stay 60 days without a visa. You\'ll need to be able to provide evidence of onward or return travel.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [26.02, 50.55],
+        name: 'Bahrain: You can get a visa on arrival, but to ensure a smoother process at the border in Bahrain it is best to get a visa in advance, either online or from the Embassy of the Kingdom of Bahrain in the UK. You may be asked to provide evidence of onward or return travel.',
+        style: {
+          fill: visa_on_arrival
+        }
+      }, {
+        latLng: [0.33, 6.73],
+        name: 'São Tomé and Príncipe: Allowed to visit for up to 15 days without a visa.',
+        style: {
+          fill: no_visa_less_than_one_month
+        }
+      }, {
+        latLng: [22.2, 114.1],
+        name: 'Hong Kong: Allowed to stay 6 months without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [61.89, -6.91],
+        name: 'Faroe Islands: No visa needed for tourism, but you should get a work and residence permit before entry if you intend to live and work there.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-11.6, 43.3],
+        name: 'Comoros: Visas can be obtained on arrival at Hahaya airport, or at other points of entry for €30.',
+        style: {
+          fill: visa_on_arrival
+        }
+      }, {
+        latLng: [-21.1, 55.5],
+        name: 'Réunion: Réunion is an Overseas Department of France. If your passport describes you as a British Citizen you will not need a visa to enter Réunion.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-24.3, -128.3],
+        name: 'Pitcairn Island: If you are an adult wishing to stay on Pitcairn for under two weeks you do not require a visa or licence prior to arrival. The Immigration Officer assesses applications for short-term visitors to Pitcairn upon arrival. If you wish to stay on Pitcairn for two weeks or more you must contact the Pitcairn Island Office in Auckland before making any plans to travel. Without a valid "licence to land and reside", access to Pitcairn will not be granted.',
+        style: {
+          fill: no_visa_less_than_one_month
+        }
+      }, {
+        latLng: [32.2, -64.7],
+        name: 'Bermuda: Allowed to stay 90 days without a visa, but you must book accommodation before you arrive.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-9.2, -171.8],
+        name: 'Tokelau: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [19.3, -81.2],
+        name: 'Cayman Islands: No visa needed.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [21.6, -71.7],
+        name: 'Turks and Caicos: Usually allowed to stay up to 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [18.4, -64.6],
+        name: 'British Virgin Islands: British nationals don\'t need a visa to visit the British Virgin Islands (BVI). It\'s normal practice for BVI immigration authorities to issue you with a one-month entry stamp on arrival. You may also be granted an extension for one further month. Extensions for up to 6 months are granted on the discretion of the Chief Immigration Officer provided that the individual can show proof of independent financial means. You may need to provide evidence of accommodation and your plans to leave the BVI at the end of your stay.',
+        style: {
+          fill: visa_on_arrival
+        }
+      }, {
+        latLng: [16.7, -62.1],
+        name: 'Montserrat: No visa needed.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [16.2, -61.5],
+        name: 'Guadeloupe: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [14.6, -61.0],
+        name: 'Martinique: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [18.2, -63.0],
+        name: 'Anguilla: British nationals do not require a visa to enter Anguilla as a visitor but accommodation must be booked prior to arrival.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [12.5, -69.9],
+        name: 'Aruba: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [12.1, -68.9],
+        name: 'Curaçao: British nationals do not require a visa for stays of up to 90 days in a calendar year. Extensions beyond 90 days can be requested at Immigration. Tourists who apply for an extension beyond the 90days must have travel insurance for the duration of their extended stay.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [12.2, -68.2],
+        name: 'Bonaire: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-17.6, -149.4],
+        name: 'French Polynesia: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-14.2, -178.1],
+        name: 'Wallis and Futuna: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-21.2, -159.7],
+        name: 'Cook Islands: Allowed to stay up to 31 days without a visa.',
+        style: {
+          fill: no_visa_less_than_one_month
+        }
+      }, {
+        latLng: [-14.3, -170.6],
+        name: 'American Samoa: If you are a British passport holder you don\'t need a visa. You will normally be given permission to enter for up to 30 days provided you have an onward air or sea ticket and any relevant health certificates.',
+        style: {
+          fill: no_visa_less_than_one_month
+        }
+      }, {
+        latLng: [22.1, 113.5],
+        name: 'Macau: Allowed to stay 6 months without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-12.8, 45.1],
+        name: 'Mayotte: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-13.7, -172.1],
+        name: 'Samoa: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [-54.4, -36.5],
+        name: 'South Georgia and the South Sandwich Islands: Access is restricted and visitor permits are required. Visas aren\'t required, but you must apply to the Commissioner for permission to land on the Islands before you travel regardless of your nationality or mode of transport.',
+        style: {
+          fill: visa
+        }
+      }, {
+        latLng: [-15.9, -5.7],
+        name: 'Saint Helena: An Entry Permit costs £17 and allows a stay of up to 183 days. You will need to provide evidence of a return ticket, or funds for a return ticket, medical insurance, adequate accommodation and sufficient funds for your stay.',
+        style: {
+          fill: visa
+        }
+      }, {
+        latLng: [-7.9, -14.3],
+        name: 'Ascension: You must get permission to visit Ascension Island from the Administrator before travel. You must be able to produce evidence of holding comprehensive travel and medical insurance. You must also be able to produce on request evidence of a return air ticket (or other evidence of pre-paid onward travel), pre-booked accommodation and sufficient funds to cover your stay on the island.',
+        style: {
+          fill: visa
+        }
+      }, {
+        latLng: [-37.1, -12.2],
+        name: 'Tristan da Cunha: You will need the prior permission of the Island Council to land on Tristan. You must have a confirmed and fully paid return passage; comprehensive travel and medical insurance that cover the cost of medical treatment and evacuation to Cape Town; and sufficient funds to cover the cost of your visit. A small landing fee is payable on arrival at the Island.',
+        style: {
+          fill: visa
+        }
+      }, {
+        latLng: [18.0, -63.0],
+        name: 'St Maarten: Allowed to stay 90 days without a visa. There are no border formalities when crossing St Maarten from the Dutch side to the French side.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [46.8, -56.3],
+        name: 'St Pierre & Miquelon: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [36.1, -5.3],
+        name: 'Gibraltar: British nationals don\'t need a visa to enter Gibraltar.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [17.4, -62.9],
+        name: 'St Eustatius: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [17.6, -63.2],
+        name: 'Saba: Allowed to stay 90 days without a visa.',
+        style: {
+          fill: no_visa
+        }
+      }, {
+        latLng: [11.7, 92.6],
+        name: 'Andaman & Nicobar: The Andaman and Nicobar Islands are territories of India. You need a valid Indian visa to visit the Andaman islands. A Restricted Area Permit is issued free of charge upon arrival at Port Blair. Entry to the Nicobar islands is not permitted to tourists. North Sentinel Island is home to the Sentinelese people who reject any contact with the outside world and entry to the island is not permitted.',
+        style: {
+          fill: visa
+        }
+      }, {
+        latLng: [45.3, 34.2],
+        name: 'Crimea: Crimea is internationally recognised as part of Ukraine. Crimea was annexed by Russia in 2014 and as of March 2018 remains under its control. As such, to enter Crimea you are required to obtain a Russian visa.',
+        style: {
+          fill: visa
+        }
+      }, {
+        latLng: [15.1, -23.6],
+        name: 'Cape Verde: It\'s possible to obtain a visa on arrival, although some travellers have reported difficulties and delays.',
+        style: {
+          fill: visa_on_arrival
+        }
+      }, {
+        latLng: [-7.3, 72.4],
+        name: 'British Indian Ocean Territory: Access to the British Indian Ocean Territory is restricted and a permit is required in advance of travel. There are no commercial flights and permits for yachts are only issued to allow safe passage through the Indian Ocean (outer islands only). Access to Diego Garcia is only permitted to those with connections either to the military facility or to the Territory\'s Administration.',
+        style: {
+          fill: visa
+        }
+      }];
+
+      var markers_count = 0;
+      for (i = 0; i < Object.keys(markers).length; ++i) {
+        if ('style' in markers[i]) {
+          markers_count++;
+        }
+      }
+
+      $('#count').text(Object.keys(data).length + markers_count);
+
+      $('#vmap').vectorMap({
+        map: 'world_mill',
+        backgroundColor: 'inhreit',
+        series: {
+          regions: [{
+            values: data,
+            attribute: 'fill'
+          }]
+        },
+        markerStyle: {
+          initial: {
+            fill: '#fff',
+            stroke: '#383f47'
+          }
+        },
+        markers: markers,
+        onRegionTipShow: function(e, label, code) {
+          code = code.toLowerCase();
+          if (code == 'th') {
+            label.html('<div class="map-tooltip">Thailand: British passport holders arriving by air or land can enter Thailand for 30 days without a visa - this is known as a visa exemption. If you need to stay longer, it\'s possible to extend your stay once, from the expiry date of the original visa, for up to 30 days.</div>');
+          } else if (code == 'my') {
+            label.html('<div class="map-tooltip">Malaysia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'id') {
+            label.html('<div class="map-tooltip">Indonesia: Allowed to stay 30 days without a visa. Visas can be purchased on arrival valid for 30 days, extendable once for a maximum of 30 days.</div>');
+          } else if (code == 'cn') {
+            label.html('<div class="map-tooltip">China: Need a visa.</div>');
+          } else if (code == 'bn') {
+            label.html('<div class="map-tooltip">Brunei: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'kh') {
+            label.html('<div class="map-tooltip">Cambodia: Visa on arrival and eVisa possible.</div>');
+          } else if (code == 'la') {
+            label.html('<div class="map-tooltip">Laos: Visa on arrival.</div>');
+          } else if (code == 'mm') {
+            label.html('<div class="map-tooltip">Myanmar/Burma: Need a visa.</div>');
+          } else if (code == 'tw') {
+            label.html('<div class="map-tooltip">Taiwan: Allowed to stay 90 days without a visa, extendable by 90 days.</div>');
+          } else if (code == 'jp') {
+            label.html('<div class="map-tooltip">Japan: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ru') {
+            label.html('<div class="map-tooltip">Russia: Need a visa.</div>');
+          } else if (code == 'mn') {
+            label.html('<div class="map-tooltip">Mongolia: Need a visa.</div>');
+          } else if (code == 'kp') {
+            label.html('<div class="map-tooltip">North Korea: Need a visa, but you\'ll likely need to be a part of a group tour.</div>');
+          } else if (code == 'kr') {
+            label.html('<div class="map-tooltip">South Korea: Allowed to stay 90 days without a visa.<br><br>NOTE: You cannot cross into North Korea by land without being shot.</div>');
+          } else if (code == 'ph') {
+            label.html('<div class="map-tooltip">Philippines: Allowed to stay 30 days without a visa.</div>');
+          } else if (code == 'pg') {
+            label.html('<div class="map-tooltip">Papua New Guinea: (Free) visa on arrival for British citizens, valid for 60 days.</div>');
+          } else if (code == 'au') {
+            label.html('<div class="map-tooltip">Australia: You need a visa to visit Australia. You can get a free eVisa allowing you to stay for 90 days.</div>');
+          } else if (code == 'nz') {
+            label.html('<div class="map-tooltip">New Zealand: Allowed to stay 6 months without a visa providing you have an onward ticket and have enough money for your stay.</div>');
+          } else if (code == 'in') {
+            label.html('<div class="map-tooltip">India: Need a visa.</div>');
+          } else if (code == 'np') {
+            label.html('<div class="map-tooltip">Nepal: You need a visa to visit Nepal. At some airports and land borders you may be able to obtain a visa on arrival.</div>');
+          } else if (code == 'bt') {
+            label.html('<div class="map-tooltip">Bhutan: Need a visa.</div>');
+          } else if (code == 'bd') {
+            label.html('<div class="map-tooltip">Bangladesh: Visa on arrival valid for 30 days.</div>');
+          } else if (code == 'fj') {
+            label.html('<div class="map-tooltip">Fiji: Allowed to stay 4 months without a visa, providing you have a return/onward ticket and a valid visa for the next country you\'re traveling to.</div>');
+          } else if (code == 'tl') {
+            label.html('<div class="map-tooltip">East Timor (Timor-Leste): You need a visa to visit East Timor. At some *ports you may be able to obtain a single entry visa on arrival valid for 30 days.</div>');
+          } else if (code == 'gb') {
+            label.html('<div class="map-tooltip">United Kingdom: You can travel between England, Wales, Scotland, and Northern Ireland without needing a passport or visa. You may need some form of photographic ID, especially if you\'re traveling by air.</div>');
+          } else if (code == 'ie') {
+            label.html('<div class="map-tooltip">Ireland: As Ireland is a part of the Common Travel Area, you do not need a passport to visit Ireland. However, you may be asked to prove your nationality under certain circumstances.</div>');
+          } else if (code == 'pk') {
+            label.html('<div class="map-tooltip">Pakistan: Need a visa.</div>');
+          } else if (code == 'af') {
+            label.html('<div class="map-tooltip">Afghanistan: Need a visa.</div>');
+          } else if (code == 'ir') {
+            label.html('<div class="map-tooltip">Iran: Need a visa.<br><br>NOTE: You can stay on Kish Island for 14 days without needing a visa.</div>');
+          } else if (code == 'om') {
+            label.html('<div class="map-tooltip">Oman: Visa on arrival valid for 30 days and extendable for 30 days.</div>');
+          } else if (code == 'ye') {
+            label.html('<div class="map-tooltip">Yemen: Need a visa. If you\'re staying for more than 14 days you\'ll need to register your passport after arrival in country with the Yemen immigration authorities.</div>');
+          } else if (code == 'sa') {
+            label.html('<div class="map-tooltip">Saudi Arabia: Need a visa. If you\'re a British Muslim you may face entry restrictions at certain times during the year.</div>');
+          } else if (code == 'qa') {
+            label.html('<div class="map-tooltip">Qatar: 30 day visa waiver. If you hold another type of British passport you need a visa.</div>');
+          } else if (code == 'iq') {
+            label.html('<div class="map-tooltip">Iraq: Need a visa.</div>');
+          } else if (code == 'kg') {
+            label.html('<div class="map-tooltip">Kyrgyzstan: Allowed to stay 60 days without a visa.</div>');
+          } else if (code == 'uz') {
+            label.html('<div class="map-tooltip">Uzbekistan: Need a visa.</div>');
+          } else if (code == 'ge') {
+            label.html('<div class="map-tooltip">Georgia: Allowed to stay 1 year without a visa.</div>');
+          } else if (code == 'am') {
+            label.html('<div class="map-tooltip">Armenia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'is') {
+            label.html('<div class="map-tooltip">Iceland: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'vu') {
+            label.html('<div class="map-tooltip">Vanuatu: Allowed to stay 30 days without a visa providing you have an onward or return ticket.</div>');
+          } else if (code == 'no') {
+            label.html('<div class="map-tooltip">Norway: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ch') {
+            label.html('<div class="map-tooltip">Switzerland: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ua') {
+            label.html('<div class="map-tooltip">Ukraine: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'za') {
+            label.html('<div class="map-tooltip">South Africa: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ls') {
+            label.html('<div class="map-tooltip">Lesotho: Visa on arrival valid for 30 days.</div>');
+          } else if (code == 'sz') {
+            label.html('<div class="map-tooltip">Swaziland: Allowed to stay 30 days without a visa.</div>');
+          } else if (code == 'tn') {
+            label.html('<div class="map-tooltip">Tunisia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'dz') {
+            label.html('<div class="map-tooltip">Algeria: Need a visa.</div>');
+          } else if (code == 'ml') {
+            label.html('<div class="map-tooltip">Mali: Need a visa.</div>');
+          } else if (code == 'ne') {
+            label.html('<div class="map-tooltip">Niger: Need a visa.</div>');
+          } else if (code == 'td') {
+            label.html('<div class="map-tooltip">Chad: Need a visa.</div>');
+          } else if (code == 'ng') {
+            label.html('<div class="map-tooltip">Nigeria: Need a visa.</div>');
+          } else if (code == 'cm') {
+            label.html('<div class="map-tooltip">Cameroon: Need a visa.</div>');
+          } else if (code == 'ke') {
+            label.html('<div class="map-tooltip">Kenya: Visas can be obtained on arrival at the airport.</div>');
+          } else if (code == 'cf') {
+            label.html('<div class="map-tooltip">Central African Republic: Need a visa.</div>');
+          } else if (code == 'mr') {
+            label.html('<div class="map-atooltip">Mauritania: Need a visa. While you may be able to get one on arrival, it can take several hours and is payable in cash only.</div>');
+          } else if (code == 'sn') {
+            label.html('<div class="map-atooltip">Senegal: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ma') {
+            label.html('<div class="map-atooltip">Morocco: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'md') {
+            label.html('<div class="map-atooltip">Moldova: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'gh') {
+            label.html('<div class="map-atooltip">Ghana: Need a visa.</div>');
+          } else if (code == 'lr') {
+            label.html('<div class="map-atooltip">Liberia: Need a visa.</div>');
+          } else if (code == 'tg') {
+            label.html('<div class="map-atooltip">Togo: Need a visa. Visas issued on arrival are limited to 7 days and getting an extension can be time consuming.</div>');
+          } else if (code == 'er') {
+            label.html('<div class="map-atooltip">Eritrea: Need a visa.</div>');
+          } else if (code == 'bf') {
+            label.html('<div class="map-atooltip">Burkina Faso: Need a visa.</div>');
+          } else if (code == 'ao') {
+            label.html('<div class="map-atooltip">Angola: Need a visa.</div>');
+          } else if (code == 'bi') {
+            label.html('<div class="map-atooltip">Burundi: Need a visa.</div>');
+          } else if (code == 'gn') {
+            label.html('<div class="map-atooltip">Guinea: Need a visa.</div>');
+          } else if (code == 'gw') {
+            label.html('<div class="map-atooltip">Guinea-Bissau: Need a visa.</div>');
+          } else if (code == 'sl') {
+            label.html('<div class="map-atooltip">Sierra Leone: Need a visa.</div>');
+          } else if (code == 'cy') {
+            label.html('<div class="map-atooltip">Cyprus: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'xc') {
+            label.html('<div class="map-atooltip">North Cyprus: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ba') {
+            label.html('<div class="map-atooltip">Bosnia and Herzegovina: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'rs') {
+            label.html('<div class="map-atooltip">Serbia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'mk') {
+            label.html('<div class="map-atooltip">Macedonia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'al') {
+            label.html('<div class="map-atooltip">Albania: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'sv') {
+            label.html('<div class="map-atooltip">El Salvador: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'hn') {
+            label.html('<div class="map-atooltip">Honduras: 30 day visit entry stamp on arrival. Can be extended up to 90 days by applying at an Immigration Office.</div>');
+          } else if (code == 'ni') {
+            label.html('<div class="map-atooltip">Nicaragua: Allowed to stay 90 days without a visa. You may be refused entry if you don\'t have an onward ticket out of Nicaragua.</div>');
+          } else if (code == 'cr') {
+            label.html('<div class="map-atooltip">Costa Rica: Allowed to stay 90 days without a visa, although the exact period is at the discretion of the immigration officer on arrival.</div>');
+          } else if (code == 'bz') {
+            label.html('<div class="map-atooltip">Belize: Allowed to stay 30 days without a visa.</div>');
+          } else if (code == 'gt') {
+            label.html('<div class="map-atooltip">Guatemala: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'pe') {
+            label.html('<div class="map-atooltip">Peru: Allowed to stay 183 days without a visa. Make sure to double check the period of time you\'ve been granted.</div>');
+          } else if (code == 'cl') {
+            label.html('<div class="map-atooltip">Chile: Allowed to stay 89 days without a visa.</div>');
+          } else if (code == 'ht') {
+            label.html('<div class="map-atooltip">Haiti: Allowed to stay 90 days without a visa.<br><br>NOTE: Tourists must pay a US $10 tourist fee payable in cash on arrival.</div>');
+          } else if (code == 'jm') {
+            label.html('<div class="map-atooltip">Jamaica: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'uy') {
+            label.html('<div class="map-atooltip">Uruguay: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ar') {
+            label.html('<div class="map-atooltip">Argentina: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'py') {
+            label.html('<div class="map-atooltip">Paraguay: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'na') {
+            label.html('<div class="map-atooltip">Namibia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'bw') {
+            label.html('<div class="map-atooltip">Botswana: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'gm') {
+            label.html('<div class="map-atooltip">Gambia: British nationals are given a 28 day stamp in their passports on arrival.</div>');
+          } else if (code == 'gq') {
+            label.html('<div class="map-atooltip">Equatorial Guinea: Need a visa.</div>');
+          } else if (code == 'co') {
+            label.html('<div class="map-atooltip">Colombia: Allowed to stay 90 days without a visa at the discretion of the Colombian Immigration Officer on arrival. You may need to provide evidence of return or onward travel.</div>');
+          } else if (code == 'ly') {
+            label.html('<div class="map-atooltip">Libya: Need a visa. A Libyan visa issued overseas may not be recognised in some areas, due to the current political conflict.</div>');
+          } else if (code == 'ss') {
+            label.html('<div class="map-atooltip">South Sudan: Need a visa.</div>');
+          } else if (code == 'eh') {
+            label.html('<div class="map-atooltip">Western Sahara: Allowed to stay 90 days without a visa. Travel is restricted and while organised groups are generally permitted, independent travellers should be aware that they could be turned back at the border.</div>');
+          } else if (code == 'sd') {
+            label.html('<div class="map-atooltip">Sudan: Need a visa.<br><br>You should register with the Aliens Department at the Ministry of Interior within 3 days of your arrival in the country. You will need two passport size photos. The fee is the Sudanese Pound equivalent of around £35. If you don\'t register within 3 days of arrival, you may be fined. Some of the larger hotels will do this for you but you should ask when you check-in.<br><br>You\'ll need to get an exit visa at the Aliens Department to leave the country.</div>');
+          } else if (code == 'kz') {
+            label.html('<div class="map-atooltip">Kazakhstan: Until 31 December 2018 you can travel to Kazakhstan without a visa, provided your stay does not exceed 30 days (the day you arrive counts as day 1, regardless of arrival time). If you wish to stay longer than 30 days, you\'ll need a visa.</div>');
+          } else if (code == 'br') {
+            label.html('<div class="map-atooltip">Brazil: Allowed to stay 90 days without a visa, extendable, at the discretion of the Federal Police, for a further 90 days. A return ticket and proof of sufficient funds may be requested on arrival.</div>');
+          } else if (code == 'fr') {
+            label.html('<div class="map-atooltip">France: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'de') {
+            label.html('<div class="map-atooltip">Germany: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'nl') {
+            label.html('<div class="map-atooltip">Netherlands: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'es') {
+            label.html('<div class="map-atooltip">Spain: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'pt') {
+            label.html('<div class="map-atooltip">Portugal: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'be') {
+            label.html('<div class="map-atooltip">Belgium: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'lu') {
+            label.html('<div class="map-atooltip">Luxembourg: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'it') {
+            label.html('<div class="map-atooltip">Italy: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'pl') {
+            label.html('<div class="map-atooltip">Poland: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'cz') {
+            label.html('<div class="map-atooltip">Czech Republic: Allowed to stay 90 days without a visa. If you intend to stay longer than 30 days you need to register with Czech Foreign Police.</div>');
+          } else if (code == 'sk') {
+            label.html('<div class="map-atooltip">Slovakia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'at') {
+            label.html('<div class="map-atooltip">Austria: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'si') {
+            label.html('<div class="map-atooltip">Slovenia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'hr') {
+            label.html('<div class="map-atooltip">Croatia: Allowed to stay 90 days without a visa. You may be asked to produce evidence of the financial means necessary to cover your stay and return or onward trip.</div>');
+          } else if (code == 'hu') {
+            label.html('<div class="map-atooltip">Hungary: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'dk') {
+            label.html('<div class="map-atooltip">Denmark: Allowed to stay 90 days without a visa.<br><br>On 4 January 2016, the Danish authorities increased border controls at the land border with Germany. If you\'re travelling to Denmark from Germany using the land border, you should make sure you have your passport with you.<br><br>The Swedish authorities have announced additional immigration controls when entering Sweden, including when travelling from Denmark to Sweden. This may cause delays to your journey and you should make sure you carry a passport or other valid identity document with you if you plan to travel from Denmark to Sweden.</div>');
+          } else if (code == 'gl') {
+            label.html('<div class="map-atooltip">Greenland: No visa needed for tourism, but you should get a work and residence permit before entry if you intend to live and work there.</div>');
+          } else if (code == 'fi') {
+            label.html('<div class="map-atooltip">Finland: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'se') {
+            label.html('<div class="map-atooltip">Sweden: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'me') {
+            label.html('<div class="map-atooltip">Montenegro: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ro') {
+            label.html('<div class="map-atooltip">Romania: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'bg') {
+            label.html('<div class="map-atooltip">Bulgaria: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'gr') {
+            label.html('<div class="map-atooltip">Greece: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ee') {
+            label.html('<div class="map-atooltip">Estonia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'lv') {
+            label.html('<div class="map-atooltip">Latvia: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'lt') {
+            label.html('<div class="map-atooltip">Lithuania: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'mg') {
+            label.html('<div class="map-atooltip">Madagascar: Non-extendable 30 day tourist visa available for purchase at the airport on arrival.</div>');
+          } else if (code == 'ca') {
+            label.html('<div class="map-atooltip">Canada: You\'ll need to get an Electronic Travel Authorization (eTA) if you\'re entering Canada by air. If you\'re travelling by land or sea, you won\'t need an eTA when you enter Canada. However, you must travel with acceptable travel documents and identification.</div>');
+          } else if (code == 'dj') {
+            label.html('<div class="map-atooltip">Djibouti: Need a visa. Visas on arrival are issued at the discretion of the Djibouti immigration authorities, so you should get a visa before you travel. You must also have evidence of your onward journey.</div>');
+          } else if (code == 'xs') {
+            label.html('<div class="map-atooltip">Somaliland: Need a visa.</div>');
+          } else if (code == 'so') {
+            label.html('<div class="map-atooltip">Somalia: Need a visa. If you arrive at Mogadishu International Airport, you can get a single entry visa, valid for one month, for US$60 in cash.</div>');
+          } else if (code == 'il') {
+            label.html('<div class="map-atooltip">Israel: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'ps') {
+            label.html('<div class="map-atooltip">Palestine: Access to Palestine can be complex. This will be updated eventually.</div>');
+          } else if (code == 'bj') {
+            label.html('<div class="map-atooltip">Benin: You are strongly advised to get a visa before travel. Visas aren\'t routinely issued on arrival.</div>');
+          } else if (code == 'ci') {
+            label.html('<div class="map-atooltip">Côte d\'Ivoire: Need a visa.</div>');
+          } else if (code == 'ga') {
+            label.html('<div class="map-atooltip">Gabon: Need a visa.</div>');
+          } else if (code == 'cd') {
+            label.html('<div class="map-atooltip">Democratic Republic of the Congo: Need a visa.</div>');
+          } else if (code == 'cg') {
+            label.html('<div class="map-atooltip">Congo: Need a visa.</div>');
+          } else if (code == 'eg') {
+            label.html('<div class="map-atooltip">Egypt: For visits of up to 30 days, you can get a visa on arrival by payment in Sterling, US Dollars or Euros; the visa fee is US$25 at approved bank kiosks within airport arrival halls, before reaching immigration counters.<br><br>British nationals travelling to Sharm el Sheikh, Dahab, Nuweiba and Taba resorts for up to 15 days receive a free entry permission stamp upon arrival. If you intend to travel out of these areas or stay longer than 15 days, you must get a visa.</div>');
+          } else if (code == 'ug') {
+            label.html('<div class="map-atooltip">Uganda: Need a visa.</div>');
+          } else if (code == 'rw') {
+            label.html('<div class="map-atooltip">Rwanda: 30 day tourist visas are available on arrival for £20 or $30. You can pay in cash (sterling, US dollars or Rwandan francs) or by Visa/Mastercard. Payment by credit card may not be available at all land border crossings.</div>');
+          } else if (code == 'pa') {
+            label.html('<div class="map-atooltip">Panama: British nationals don\'t need a visa to visit Panama except if arriving by sea. An initial stay of 180 days is granted on entry to Panama. You must have a return or onward ticket and the equivalent of US$500 or a credit card.</div>');
+          } else if (code == 'tt') {
+            label.html('<div class="map-atooltip">Trinidad and Tobago: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'nc') {
+            label.html('<div class="map-atooltip">New Caledonia: Allowed to stay 90 days without a visa.');
+          } else if (code == 'by') {
+            label.html('<div class="map-atooltip">Belarus: All British national passport holders (except those entering on a diplomatic or official passport) can now enter Belarus for a maximum of 5 days without a visa (the day you arrive counts as day one, regardless of arrival time). Entry and exit will only be allowed at Minsk International Airport and you\'ll need to show documentary evidence of medical insurance to the value of 10,000 euros and funds equivalent to 25 euros per day. This can be in the form of cash, credit card or travellers cheques in any currency.</div>');
+          } else if (code == 'ec') {
+            label.html('<div class="map-atooltip">Ecuador: Allowed to stay 90 days without a visa, but you may be asked about your reason for travel and may need to provide evidence of a return or onward flight/bus ticket when you arrive.</div>');
+          } else if (code == 've') {
+            label.html('<div class="map-atooltip">Venezuela: If you\'re arriving by air, you can enter for up to 90 days on a tourist card issued on arrival. You must have a valid return ticket. If you\'re arriving overland or by sea, you must get a visa in advance from your nearest Venezuelan Embassy or Consulate.</div>');
+          } else if (code == 'gy') {
+            label.html('<div class="map-atooltip">Guyana: Allowed to stay 30 days without a visa, but extensions can usually be obtained from the Ministry of Home Affairs in Georgetown.</div>');
+          } else if (code == 'mw') {
+            label.html('<div class="map-atooltip">Malawi: The Malawi authorities strongly advise you to get a visa before travel. If you can\'t get a visa before travel, you can get a visa on arrival at any port of entry.</div>');
+          } else if (code == 'lk') {
+            label.html('<div class="map-atooltip">Sri Lanka: Need a visa. Although it\'s still possible to get a tourist visa on arrival, it\'s better to get one before you travel.</div>');
+          } else if (code == 'mx') {
+            label.html('<div class="map-atooltip">Mexico: Allowed to stay 180 days without a visa, but you\'ll need to complete an immigration form and have this with you when you enter and leave Mexico.</div>');
+          } else if (code == 'sy') {
+            label.html('<div class="map-atooltip">Syria: Need a visa.</div>');
+          } else if (code == 'et') {
+            label.html('<div class="map-atooltip">Ethiopia: Need a visa. Visas on arrival are only available for tourists at Addis Ababa (Bole) International airport, at a cost of approximately $US50 for 1 month and $US75 for 3 months (Euros, US dollars and Ethiopian birr are all accepted). All other categories of visitor must get a visa from the Ethiopian Embassy closest to their place of legal residence before travelling.</div>');
+          } else if (code == 'sr') {
+            label.html('<div class="map-atooltip">Suriname: British passport holders visiting Suriname as tourists and arriving at Johan Adolf Pengel International Airport in Paramaribo can get a single entry tourist card on arrival. The inital stay is for 30 days, however this can be extended to a maximum of 90 days at the Immigration Dept.</div>');
+          } else if (code == 'ae') {
+            label.html('<div class="map-atooltip">United Arab Emirates: If you\'re a British Citizen you can get a visitor\'s visa on arrival in the UAE. In the past, this visa has allowed the visitor to stay in the UAE for up to 30 days. The visa has terminated automatically on departure and a new visa issued on arrival each time the same visitor returns to the UAE.<br><br>That approach continues to be applied in most cases, but in some cases British citizens (and visitors of some other nationalities) who have left the UAE and returned again within the 30 day period of stay granted at the time of the first arrival, haven\'t received a new visa. Instead their stay has been limited to the initial 30 day period.</div>');
+          } else if (code == 'lb') {
+            label.html('<div class="map-atooltip">Lebanon: British citizens can apply for a free single entry tourist or family visit visa on arrival. Entry requirements are subject to change, so you should check with the Lebanese Embassy before you travel.</div>');
+          } else if (code == 'kw') {
+            label.html('<div class="map-atooltip">Kuwait: Regardless of age, British nationals travelling by air can get a free 30-day entry permit/tourist visa, or a 90-day visit/business visa for a fee, on arrival. The immigration authorities may ask to see evidence of return or onward travel, a sponsor\'s letter and hotel confirmation.<br><br>If you are arriving by land or sea, you should obtain visas in advance from the Kuwaiti Embassy in London.</div>');
+          } else if (code == 'bs') {
+            label.html('<div class="map-atooltip">Bahamas: British nationals visiting are usually allowed entry into the Bahamas for up to 21 days. This can be extended up to a maximum of 8 months by applying to the Department of Immigration in Nassau.<br><br>If you are travelling via the USA, you may need to apply for an ESTA. The Bahamas counts as part of the \'contiguous territory and islands\' for US visa waiver purposes and time spent in The Bahamas counts towards the 90 day maximum permitted stay in the US under this waiver.</div>');
+          } else if (code == 'az') {
+            label.html('<div class="map-atooltip">Azerbaijan: Need a visa.</div>');
+          } else if (code == 'zw') {
+            label.html('<div class="map-atooltip">Zimbabwe: You can purchase a visa on arrival.</div>');
+          } else if (code == 'sb') {
+            label.html('<div class="map-atooltip">Soloman Is.: Allowed to stay 90 days without a visa. You need an onward ticket, and sufficient funds to cover your stay.</div>');
+          } else if (code == 'bo') {
+            label.html('<div class="map-atooltip">Bolivia: British nationals don\'t need a visa to visit Bolivia. The length of stay permitted on entering Bolivia is initially 30 days. This can be extended for a further 60 days, at no extra charge, as long as you apply before the end of the 30 day period at one of the Department of Immigration offices throughout the country.<br><br>Your passport must contain an entry stamp, otherwise you\'ll have to pay a fine to leave.</div>');
+          } else if (code == 'cu') {
+            label.html('<div class="map-atooltip">Cuba: Need a visa. If you\'re entering Cuba as a tourist, you\'ll need to get a tourist card before you travel.<br><br>If you\'re a dual national, you should contact the Cuban Embassy for advice on entry requirements before you travel.<br><br>There\'s a mandatory airport tax of 25 Cuban convertible pesos (CUCs). This fee should be included in the cost of your airline ticket. If in doubt, check with your airline.</div>');
+          } else if (code == 'fk') {
+            label.html('<div class="map-atooltip">Falkland Islands: British nationals do not need a visa to enter the Falkland Islands, but you may need a visa to transit Chile. There are no facilities to issue Chilean visas on the Falkland Islands. You must have a passport valid for the proposed duration of your stay, a return air ticket (or other evidence of pre‑paid onward travel), evidence of accommodation with family/friends/hotel/business, sufficient funds to cover your stay in the Islands. There is a £22 departure tax on leaving the Islands that is not included on LATAM airline flight tickets.</div>');
+          } else if (code == 'vn') {
+            label.html('<div class="map-atooltip">Vietnam: Until 30 June 2021 \'British Citizen\' passport holders travelling for tourism or business can enter Vietnam for up to a maximum of 15 days (inclusive of dates of entry and exit) without a visa. If you have a different type of British nationality – for example \'British national (overseas)\' you\'ll need to get a visa before entering Vietnam. For visits of up to 30 days, you can get an e-visa online before you travel. Use of the e-visa is limited to certain entry/exit points which you must select at the time of application. If you don\'t have fixed travel plans, consider applying for a regular single entry visa from the nearest Vietnamese Embassy, which allows more flexibility.</div>');
+          } else if (code == 'xk') {
+            label.html('<div class="map-atooltip">Kosovo: British nationals don\'t need a visa to enter Kosovo. You may be asked to provide documentary evidence giving a reason for your stay. A 90-day entry stamp will be issued which is renewable for longer stays. The authorities in Serbia don\'t consider the designated crossing points from Kosovo to be official ‘\'international\' border crossing points.</div>');
+          } else {
+            label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
+          }
+        },
+        onRegionClick: function(e, code) {
+          code = code.toLowerCase();
+          if (code == 'th') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/thailand/entry-requirements';
+          } else if (code == 'my') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/malaysia/entry-requirements';
+          } else if (code == 'id') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/indonesia/entry-requirements';
+          } else if (code == 'cn') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/china/entry-requirements';
+          } else if (code == 'bn') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/brunei/entry-requirements';
+          } else if (code == 'kh') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/cambodia/entry-requirements';
+          } else if (code == 'la') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/laos/entry-requirements';
+          } else if (code == 'mm') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/burma/entry-requirements';
+          } else if (code == 'tw') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/taiwan/entry-requirements';
+          } else if (code == 'jp') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/japan/entry-requirements';
+          } else if (code == 'ru') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/russia/entry-requirements';
+          } else if (code == 'mn') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/mongolia/entry-requirements';
+          } else if (code == 'kp') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/north-korea/entry-requirements';
+          } else if (code == 'kr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/south-korea/entry-requirements';
+          } else if (code == 'ph') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/philippines/entry-requirements';
+          } else if (code == 'pg') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/papua-new-guinea/entry-requirements';
+          } else if (code == 'au') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/australia/entry-requirements';
+          } else if (code == 'nz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/new-zealand/entry-requirements';
+          } else if (code == 'in') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/india/entry-requirements';
+          } else if (code == 'np') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/nepal/entry-requirements';
+          } else if (code == 'bt') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/bhutan/entry-requirements';
+          } else if (code == 'bd') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/bangladesh/entry-requirements';
+          } else if (code == 'fj') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/fiji/entry-requirements';
+          } else if (code == 'tl') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/timor-leste/entry-requirements';
+          } else if (code == 'ie') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/ireland/entry-requirements';
+          } else if (code == 'pk') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/pakistan/entry-requirements';
+          } else if (code == 'af') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/afghanistan/entry-requirements';
+          } else if (code == 'ir') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/iran/entry-requirements';
+          } else if (code == 'om') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/oman/entry-requirements';
+          } else if (code == 'ye') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/yemen/entry-requirements';
+          } else if (code == 'sa') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/saudi-arabia/entry-requirements';
+          } else if (code == 'qa') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/qatar/entry-requirements';
+          } else if (code == 'iq') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/iraq/entry-requirements';
+          } else if (code == 'kg') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/kyrgyzstan/entry-requirements';
+          } else if (code == 'uz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/uzbekistan/entry-requirements';
+          } else if (code == 'ge') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/georgia/entry-requirements';
+          } else if (code == 'am') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/armenia/entry-requirements';
+          } else if (code == 'is') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/iceland/entry-requirements';
+          } else if (code == 'vu') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/vanuatu/entry-requirements';
+          } else if (code == 'no') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/norway/entry-requirements';
+          } else if (code == 'ch') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/switzerland/entry-requirements';
+          } else if (code == 'ua') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/ukraine/entry-requirements';
+          } else if (code == 'za') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/south-africa/entry-requirements';
+          } else if (code == 'ls') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/lesotho/entry-requirements';
+          } else if (code == 'sz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/swaziland/entry-requirements';
+          } else if (code == 'tn') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/tunisia/entry-requirements';
+          } else if (code == 'dz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/algeria/entry-requirements';
+          } else if (code == 'ml') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/mali/entry-requirements';
+          } else if (code == 'ne') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/niger/entry-requirements';
+          } else if (code == 'td') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/chad/entry-requirements';
+          } else if (code == 'ng') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/nigeria/entry-requirements';
+          } else if (code == 'cm') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/cameroon/entry-requirements';
+          } else if (code == 'ke') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/kenya/entry-requirements';
+          } else if (code == 'cf') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/central-african-republic/entry-requirements';
+          } else if (code == 'mr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/mauritania/entry-requirements';
+          } else if (code == 'sn') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/senegal/entry-requirements';
+          } else if (code == 'ma') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/morocco/entry-requirements';
+          } else if (code == 'md') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/moldova/entry-requirements';
+          } else if (code == 'gh') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/ghana/entry-requirements';
+          } else if (code == 'lr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/liberia/entry-requirements';
+          } else if (code == 'tg') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/togo/entry-requirements';
+          } else if (code == 'er') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/eritrea/entry-requirements';
+          } else if (code == 'bf') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/burkina-faso/entry-requirements';
+          } else if (code == 'ao') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/angola/entry-requirements';
+          } else if (code == 'bi') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/burundi/entry-requirements';
+          } else if (code == 'gn') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/guinea/entry-requirements';
+          } else if (code == 'gw') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/guinea-bissau/entry-requirements';
+          } else if (code == 'sl') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/sierra-leone/entry-requirements';
+          } else if (code == 'cy') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/cyprus/entry-requirements';
+          } else if (code == 'xc') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/cyprus/entry-requirements';
+          } else if (code == 'ba') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/bosnia-and-herzegovina/entry-requirements';
+          } else if (code == 'rs') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/serbia/entry-requirements';
+          } else if (code == 'mk') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/macedonia/entry-requirements';
+          } else if (code == 'al') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/albania/entry-requirements';
+          } else if (code == 'sv') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/el-salvador/entry-requirements';
+          } else if (code == 'hn') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/honduras/entry-requirements';
+          } else if (code == 'ni') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/nicaragua/entry-requirements';
+          } else if (code == 'cr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/costa-rica/entry-requirements';
+          } else if (code == 'bz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/belize/entry-requirements';
+          } else if (code == 'gt') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/guatemala/entry-requirements';
+          } else if (code == 'pe') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/peru/entry-requirements';
+          } else if (code == 'cl') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/chile/entry-requirements';
+          } else if (code == 'ht') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/haiti/entry-requirements';
+          } else if (code == 'jm') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/jamaica/entry-requirements';
+          } else if (code == 'uy') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/uraguay/entry-requirements';
+          } else if (code == 'ar') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/argentina/entry-requirements';
+          } else if (code == 'py') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/paraguay/entry-requirements';
+          } else if (code == 'na') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/namibia/entry-requirements';
+          } else if (code == 'bw') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/botswana/entry-requirements';
+          } else if (code == 'gm') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/gambia/entry-requirements';
+          } else if (code == 'gq') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/equatorial-guinea/entry-requirements';
+          } else if (code == 'co') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/colombia/entry-requirements';
+          } else if (code == 'ly') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/libya/entry-requirements';
+          } else if (code == 'ss') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/south-sudan/entry-requirements';
+          } else if (code == 'eh') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/western-sahara/entry-requirements';
+          } else if (code == 'sd') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/sudan/entry-requirements';
+          } else if (code == 'kz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/kazakhstan/entry-requirements';
+          } else if (code == 'br') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/brazil/entry-requirements';
+          } else if (code == 'fr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/france/entry-requirements';
+          } else if (code == 'de') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/germany/entry-requirements';
+          } else if (code == 'nl') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/netherlands/entry-requirements';
+          } else if (code == 'es') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/spain/entry-requirements';
+          } else if (code == 'pt') {
+            label.html('<div class="map-atooltip">Portugal: Allowed to stay 90 days without a visa.</div>');
+          } else if (code == 'be') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/belgium/entry-requirements';
+          } else if (code == 'lu') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/luxembourg/entry-requirements';
+          } else if (code == 'it') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/italy/entry-requirements';
+          } else if (code == 'pl') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/poland/entry-requirements';
+          } else if (code == 'cz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/czech-republic/entry-requirements';
+          } else if (code == 'sk') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/slovakia/entry-requirements';
+          } else if (code == 'at') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/austria/entry-requirements';
+          } else if (code == 'si') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/slovenia/entry-requirements';
+          } else if (code == 'hr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/croatia/entry-requirements';
+          } else if (code == 'hu') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/hungary/entry-requirements';
+          } else if (code == 'dk') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/denmark/entry-requirements';
+          } else if (code == 'gl') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/denmark/entry-requirements';
+          } else if (code == 'fi') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/finland/entry-requirements';
+          } else if (code == 'se') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/sweden/entry-requirements';
+          } else if (code == 'me') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/montenegro/entry-requirements';
+          } else if (code == 'ro') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/romania/entry-requirements';
+          } else if (code == 'bg') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/bulgaria/entry-requirements';
+          } else if (code == 'gr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/greece/entry-requirements';
+          } else if (code == 'ee') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/estonia/entry-requirements';
+          } else if (code == 'lv') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/latvia/entry-requirements';
+          } else if (code == 'lt') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/lithuania/entry-requirements';
+          } else if (code == 'mg') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/madagascar/entry-requirements';
+          } else if (code == 'ca') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/canada/entry-requirements';
+          } else if (code == 'dj') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/djibouti/entry-requirements';
+          } else if (code == 'xs') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/somaliland/entry-requirements';
+          } else if (code == 'so') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/somalia/entry-requirements';
+          } else if (code == 'il') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/israel/entry-requirements';
+          } else if (code == 'ps') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/israel/entry-requirements';
+          } else if (code == 'bj') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/benin/entry-requirements';
+          } else if (code == 'ci') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/cote-d-ivoire/entry-requirements';
+          } else if (code == 'ga') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/gabon/entry-requirements';
+          } else if (code == 'cd') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/democratic-republic-of-the-congo/entry-requirements';
+          } else if (code == 'cg') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/congo/entry-requirements';
+          } else if (code == 'eg') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/egypt/entry-requirements';
+          } else if (code == 'ug') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/uganda/entry-requirements';
+          } else if (code == 'rw') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/rwanda/entry-requirements';
+          } else if (code == 'pa') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/panama/entry-requirements';
+          } else if (code == 'tt') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/trinidad-and-tobago/entry-requirements';
+          } else if (code == 'nc') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/new-caledonia/entry-requirements';
+          } else if (code == 'by') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/belarus/entry-requirements';
+          } else if (code == 'ec') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/ecuador/entry-requirements';
+          } else if (code == 've') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/venezuela/entry-requirements';
+          } else if (code == 'gy') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/guyana/entry-requirements';
+          } else if (code == 'mw') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/malawi/entry-requirements';
+          } else if (code == 'lk') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/sri-lanka/entry-requirements';
+          } else if (code == 'mx') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/mexico/entry-requirements';
+          } else if (code == 'sy') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/syria/entry-requirements';
+          } else if (code == 'et') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/ethiopia/entry-requirements';
+          } else if (code == 'sr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/suriname/entry-requirements';
+          } else if (code == 'ae') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/united-arab-emirates/entry-requirements';
+          } else if (code == 'lb') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/lebanon/entry-requirements';
+          } else if (code == 'kw') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/kuwait/entry-requirements';
+          } else if (code == 'bs') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/bahamas/entry-requirements';
+          } else if (code == 'zw') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/zimbabwe/entry-requirements';
+          } else if (code == 'sb') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/solomon-islands/entry-requirements';
+          } else if (code == 'bo') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/bolivia/entry-requirements';
+          } else if (code == 'cu') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/cuba/entry-requirements';
+          } else if (code == 'fk') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/falkland-islands/entry-requirements';
+          } else if (code == 'vn') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/vietnam/entry-requirements';
+          } else if (code == 'xk') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/kosovo/entry-requirements';
+          }
+        }
+      });
+    });
+  </script>
+
+  <body>
+    <div id="header">
+      <a href="/" id="title">British Citizen Tourist Map</a> <span id="subtitle" class="hidden-xs">Entry requirements for <abbr title="People with a full 'British Citizen' passport.">British citizens</abbr> who want to travel the world.</span> <span id="header-right" class="hidden-xs"><span id="count">0</span> Locations</span>
+    </div>
+    <noscript>
+      <div id="noscript">
+        <strong>Hey!</strong> To display the map you need to have Javascript enabled. Cheers!
+      </div>
+    </noscript>
+    <div id="vmap"></div>
+    <div id="footer">
+      <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="You must obtain a visa or other prior authorization before traveling. You cannot get a visa on arrival.">
+        <div class="square square-visa"></div>&nbsp;=&nbsp;Visa Required Before Arrival&nbsp;
+      </div>
+      <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="No visa is required to enter. The length you will be allowed to stay may vary.">
+        <div class="square square-no-visa"></div>&nbsp;=&nbsp;Visa Not Required&nbsp;
+      </div>
+      <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="No visa is required to enter and you will be allowed to stay initally for no longer than 30 days. You may be able to extend your stay without obtaining a visa.">
+        <div class="square square-no-visa-less-than-one-month"></div>&nbsp;=&nbsp;Visa Not Required (1 Month or Less)&nbsp;
+      </div>
+      <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="You can obtain a visa on arrival. This may be specific to certain ports or crossings. The length you will be allowed to stay may vary.">
+        <div class="square square-visa-on-arrival"></div>&nbsp;=&nbsp;Visa On Arrival&nbsp;
+      </div>
+      <div id="credit">
+        <a href="https://github.com/touristmap/touristmap.github.io" target="_blank">Made with <i class="icon ion-heart" style="color: #e25555;"></i> in Britain</a>
+      </div>
+    </div>
 
     <script>
-        $(function() {
-            var no_visa = "#2ecc71";
-            var no_visa_less_than_one_month = "#3498db";
-            var visa = "#e74c3c";
-            var visa_on_arrival = "#9b59b6";
-
-            var data = {
-                "AE": visa_on_arrival,
-                "AF": visa,
-                "AL": no_visa,
-                "AM": no_visa,
-                "AO": visa,
-                "AR": no_visa,
-                "AT": no_visa,
-                "AU": visa,
-                "AZ": visa,
-                "BA": no_visa,
-                "BD": visa_on_arrival,
-                "BE": no_visa,
-                "BF": visa,
-                "BG": no_visa,
-                "BI": visa,
-                "BJ": visa,
-                "BN": no_visa,
-                "BO": no_visa_less_than_one_month,
-                "BR": no_visa,
-                "BS": no_visa_less_than_one_month,
-                "BT": visa,
-                "BW": no_visa,
-                "BY": no_visa_less_than_one_month,
-                "BZ": no_visa_less_than_one_month,
-                "CA": visa,
-                "CD": visa,
-                "CF": visa,
-                "CG": visa,
-                "CH": no_visa,
-                "CI": visa,
-                "CL": no_visa,
-                "CM": visa,
-                "CN": visa,
-                "CO": no_visa,
-                "CR": no_visa,
-                "CU": visa,
-                "CY": no_visa,
-                "CZ": no_visa,
-                "DE": no_visa,
-                "DJ": visa_on_arrival,
-                "DK": no_visa,
-                "DZ": visa,
-                "EC": no_visa,
-                "EE": no_visa,
-                "EG": visa_on_arrival,
-                "EH": no_visa,
-                "ER": visa,
-                "ES": no_visa,
-                "ET": visa_on_arrival,
-                "FI": no_visa,
-                "FJ": no_visa,
-                "FK": no_visa,
-                "FR": no_visa,
-                "GA": visa,
-                "GB": no_visa,
-                "GE": no_visa,
-                "GH": visa,
-                "GL": no_visa,
-                "GM": visa_on_arrival,
-                "GN": visa,
-                "GQ": visa,
-                "GR": no_visa,
-                "GT": no_visa,
-                "GW": visa,
-                "GY": no_visa_less_than_one_month,
-                "HN": no_visa_less_than_one_month,
-                "HR": no_visa,
-                "HT": no_visa,
-                "HU": no_visa,
-                "ID": no_visa_less_than_one_month,
-                "IE": no_visa,
-                "IL": no_visa,
-                "IN": visa,
-                "IQ": visa,
-                "IR": visa,
-                "IS": no_visa,
-                "IT": no_visa,
-                "JM": no_visa,
-                "JP": no_visa,
-                "KE": visa_on_arrival,
-                "KG": no_visa,
-                "KH": visa_on_arrival,
-                "KP": visa,
-                "KR": no_visa,
-                "KW": visa_on_arrival,
-                "KZ": no_visa_less_than_one_month,
-                "LA": visa_on_arrival,
-                "LB": visa_on_arrival,
-                "LK": visa_on_arrival,
-                "LR": visa,
-                "LS": visa_on_arrival,
-                "LT": no_visa,
-                "LU": no_visa,
-                "LV": no_visa,
-                "LY": visa,
-                "MA": no_visa,
-                "MD": no_visa,
-                "ME": no_visa,
-                "MG": visa_on_arrival,
-                "MK": no_visa,
-                "ML": visa,
-                "MM": visa,
-                "MN": visa,
-                "MR": visa_on_arrival,
-                "MT": no_visa,
-                "MW": visa_on_arrival,
-                "MX": no_visa,
-                "MY": no_visa,
-                "NA": no_visa,
-                "NC": no_visa,
-                "NE": visa,
-                "NG": visa,
-                "NI": no_visa,
-                "NL": no_visa,
-                "NO": no_visa,
-                "NP": visa_on_arrival,
-                "NZ": no_visa,
-                "OM": visa_on_arrival,
-                "PA": no_visa,
-                "PE": no_visa,
-                "PG": visa_on_arrival,
-                "PH": no_visa_less_than_one_month,
-                "PK": visa,
-                "PL": no_visa,
-                "PS": visa_on_arrival,
-                "PT": no_visa,
-                "PY": no_visa,
-                "QA": no_visa_less_than_one_month,
-                "RO": no_visa,
-                "RS": no_visa,
-                "RU": visa,
-                "RW": visa_on_arrival,
-                "SA": visa,
-                "SB": no_visa,
-                "SD": visa,
-                "SE": no_visa,
-                "SI": no_visa,
-                "SK": no_visa,
-                "SL": visa,
-                "SN": no_visa,
-                "SO": visa,
-                "SS": visa,
-                "SR": no_visa_less_than_one_month,
-                "SV": no_visa,
-                "SY": visa,
-                "SZ": no_visa_less_than_one_month,
-                "TD": visa,
-                "TG": visa_on_arrival,
-                "TH": no_visa_less_than_one_month,
-                "TL": visa_on_arrival,
-                "TN": no_visa,
-                "TT": no_visa,
-                "TW": no_visa,
-                "UA": no_visa,
-                "UG": visa,
-                "UY": no_visa,
-                "UZ": visa,
-                "VE": no_visa,
-                "VN": no_visa_less_than_one_month,
-                "VU": no_visa_less_than_one_month,
-                "XC": no_visa,
-                "XK": no_visa,
-                "XS": visa,
-                "YE": visa,
-                "ZA": no_visa,
-                "ZW": visa_on_arrival
-            };
-
-            var markers = [{
-                latLng: [41.90, 12.45],
-                name: 'Vatican City: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [43.73, 7.41],
-                name: 'Monaco: Allowed to stay 90 days without a visa. Immigration is handled by France for Monaco.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-0.52, 166.93],
-                name: 'Nauru: Need a visa.',
-                style: {
-                    fill: visa
-                }
-            }, {
-                latLng: [-8.51, 179.21],
-                name: 'Tuvalu: Visas are not required for British nationals visiting for periods of up to one month. An extension of stay for a maximum period of three months is available from the Department of Immigration.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [43.93, 12.46],
-                name: 'San Marino: You don\'t need a visa to visit San Marino. If you\'re staying in San Marino for less than 30 days in an official residency (ie hotel or bed and breakfast) you don\'t need a \'permesso di soggiorno turistico\'. However, if you\'re staying privately, you\'ll need to report your stay to the Ufficio Stranieri (Foreigners\' Office) of the local Gendarmerie within 24 hours of arrival.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [47.14, 9.52],
-                name: 'Liechtenstein: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [7.11, 171.06],
-                name: 'Marshall Islands: Need a visa. A 30-day visit visa is available on arrival at the airport. Those arriving by boat must also obtain a visa. 30-day visit visas may be extended twice, for a maximum stay of 90 days and each extension costs approximately US$10.',
-                style: {
-                    fill: visa_on_arrival
-                }
-            }, {
-                latLng: [17.3, -62.73],
-                name: 'Saint Kitts and Nevis: No visa needed. On entry, you will be granted a specified period to stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [3.2, 73.22],
-                name: 'Maldives: 30 day visa on arrival available provided you hold a valid onward or return ticket and enough funds to cover your stay.',
-                style: {
-                    fill: visa_on_arrival
-                }
-            }, {
-                latLng: [35.88, 14.5],
-                name: 'Malta: No visa requirement for British nationals.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [12.05, -61.75],
-                name: 'Grenada: No visa needed. On entry, you will be granted a specified period to stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [13.16, -61.23],
-                name: 'Saint Vincent and the Grenadines: No visa needed. On entry, you will be granted a specified period to stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [13.16, -59.55],
-                name: 'Barbados: No visa needed. On entry, you will be granted a specified period to stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [17.11, -61.85],
-                name: 'Antigua and Barbuda: No visa needed. On entry, you will be granted a specified period to stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-4.61, 55.45],
-                name: 'Seychelles: Although Seychelles is a visa-free country, you must hold an onward or return ticket, have confirmed accommodation, and have sufficient funds for duration of your stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [7.35, 134.46],
-                name: 'Palau: Visas are not required for British nationals visiting for periods of up to 30 days. Extensions of stay are not automatically granted. On arrival you can ask for entry to be granted for all the time you believe you will need. Consult the Bureau of Immigration before you travel if you are likely to seek an extension of stay.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [42.5, 1.51],
-                name: 'Andorra: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [14.01, -60.98],
-                name: 'Saint Lucia: No visa needed. On entry, you will be granted a specified period to stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [6.91, 158.18],
-                name: 'Federated States of Micronesia: Tourist/visitor visas are issued on arrival and the duration of stay is authorised for the number of days requested. You may extend your visa by up to 30 days. Subsequent extensions may be granted for another 30 days but the total time of stay shall not exceed 90 days. There is no fee charged for an extension of stay.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [1.3, 103.8],
-                name: 'Singapore: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [1.46, 173.03],
-                name: 'Kiribati: Allowed to stay 1 month without a visa provided you hold a return/onward ticket and sufficient funds for your stay. This can be extended on application to the Ministry of Foreign Affairs and Immigration in Bairiki, for additional 1 month periods for a maximum 3 additional months, provided your passport remains valid.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [-21.13, -175.2],
-                name: 'Tonga: British passport holders visiting Tonga as a tourist or on business are normally given permission to enter the country for up to 30 days. You should be able to provide an onward air or sea ticket, adequate funds and relevant health certificates. If you wish to extend your stay you must obtain permission from the Principal Immigration Officer.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [15.3, -61.38],
-                name: 'Dominica: No visa needed. On entry, you will be granted a specified period to stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-20.2, 57.5],
-                name: 'Mauritius: Allowed to stay 60 days without a visa. You\'ll need to be able to provide evidence of onward or return travel.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [26.02, 50.55],
-                name: 'Bahrain: You can get a visa on arrival, but to ensure a smoother process at the border in Bahrain it is best to get a visa in advance, either online or from the Embassy of the Kingdom of Bahrain in the UK. You may be asked to provide evidence of onward or return travel.',
-                style: {
-                    fill: visa_on_arrival
-                }
-            }, {
-                latLng: [0.33, 6.73],
-                name: 'São Tomé and Príncipe: Allowed to visit for up to 15 days without a visa.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [22.2, 114.1],
-                name: 'Hong Kong: Allowed to stay 6 months without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [61.89, -6.91],
-                name: 'Faroe Islands: No visa needed for tourism, but you should get a work and residence permit before entry if you intend to live and work there.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-11.6, 43.3],
-                name: 'Comoros: Visas can be obtained on arrival at Hahaya airport, or at other points of entry for €30.',
-                style: {
-                    fill: visa_on_arrival
-                }
-            }, {
-                latLng: [-21.1, 55.5],
-                name: 'Réunion: Réunion is an Overseas Department of France. If your passport describes you as a British Citizen you will not need a visa to enter Réunion.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-24.3, -128.3],
-                name: 'Pitcairn Island: If you are an adult wishing to stay on Pitcairn for under two weeks you do not require a visa or licence prior to arrival. The Immigration Officer assesses applications for short-term visitors to Pitcairn upon arrival. If you wish to stay on Pitcairn for two weeks or more you must contact the Pitcairn Island Office in Auckland before making any plans to travel. Without a valid "licence to land and reside", access to Pitcairn will not be granted.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [32.2, -64.7],
-                name: 'Bermuda: Allowed to stay 90 days without a visa, but you must book accommodation before you arrive.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-9.2, -171.8],
-                name: 'Tokelau: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [19.3, -81.2],
-                name: 'Cayman Islands: No visa needed.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [21.6, -71.7],
-                name: 'Turks and Caicos: Usually allowed to stay up to 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [18.4, -64.6],
-                name: 'British Virgin Islands: British nationals don\'t need a visa to visit the British Virgin Islands (BVI). It\'s normal practice for BVI immigration authorities to issue you with a one-month entry stamp on arrival. You may also be granted an extension for one further month. Extensions for up to 6 months are granted on the discretion of the Chief Immigration Officer provided that the individual can show proof of independent financial means. You may need to provide evidence of accommodation and your plans to leave the BVI at the end of your stay.',
-                style: {
-                    fill: visa_on_arrival
-                }
-            }, {
-                latLng: [16.7, -62.1],
-                name: 'Montserrat: No visa needed.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [16.2, -61.5],
-                name: 'Guadeloupe: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [14.6, -61.0],
-                name: 'Martinique: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [18.2, -63.0],
-                name: 'Anguilla: British nationals do not require a visa to enter Anguilla as a visitor but accommodation must be booked prior to arrival.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [12.5, -69.9],
-                name: 'Aruba: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [12.1, -68.9],
-                name: 'Curaçao: British nationals do not require a visa for stays of up to 90 days in a calendar year. Extensions beyond 90 days can be requested at Immigration. Tourists who apply for an extension beyond the 90days must have travel insurance for the duration of their extended stay.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [12.2, -68.2],
-                name: 'Bonaire: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-17.6, -149.4],
-                name: 'French Polynesia: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-14.2, -178.1],
-                name: 'Wallis and Futuna: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-21.2, -159.7],
-                name: 'Cook Islands: Allowed to stay up to 31 days without a visa.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [-14.3, -170.6],
-                name: 'American Samoa: If you are a British passport holder you don\'t need a visa. You will normally be given permission to enter for up to 30 days provided you have an onward air or sea ticket and any relevant health certificates.',
-                style: {
-                    fill: no_visa_less_than_one_month
-                }
-            }, {
-                latLng: [22.1, 113.5],
-                name: 'Macau: Allowed to stay 6 months without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-12.8, 45.1],
-                name: 'Mayotte: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-13.7, -172.1],
-                name: 'Samoa: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [-54.4, -36.5],
-                name: 'South Georgia and the South Sandwich Islands: Access is restricted and visitor permits are required. Visas aren\'t required, but you must apply to the Commissioner for permission to land on the Islands before you travel regardless of your nationality or mode of transport.',
-                style: {
-                    fill: visa
-                }
-            }, {
-                latLng: [-15.9, -5.7],
-                name: 'Saint Helena: An Entry Permit costs £17 and allows a stay of up to 183 days. You will need to provide evidence of a return ticket, or funds for a return ticket, medical insurance, adequate accommodation and sufficient funds for your stay.',
-                style: {
-                    fill: visa
-                }
-            }, {
-                latLng: [-7.9, -14.3],
-                name: 'Ascension: You must get permission to visit Ascension Island from the Administrator before travel. You must be able to produce evidence of holding comprehensive travel and medical insurance. You must also be able to produce on request evidence of a return air ticket (or other evidence of pre-paid onward travel), pre-booked accommodation and sufficient funds to cover your stay on the island.',
-                style: {
-                    fill: visa
-                }
-            }, {
-                latLng: [-37.1, -12.2],
-                name: 'Tristan da Cunha: You will need the prior permission of the Island Council to land on Tristan. You must have a confirmed and fully paid return passage; comprehensive travel and medical insurance that cover the cost of medical treatment and evacuation to Cape Town; and sufficient funds to cover the cost of your visit. A small landing fee is payable on arrival at the Island.',
-                style: {
-                    fill: visa
-                }
-            }, {
-                latLng: [18.0, -63.0],
-                name: 'St Maarten: Allowed to stay 90 days without a visa. There are no border formalities when crossing St Maarten from the Dutch side to the French side.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [46.8, -56.3],
-                name: 'St Pierre & Miquelon: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [36.1, -5.3],
-                name: 'Gibraltar: British nationals don\'t need a visa to enter Gibraltar.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [17.4, -62.9],
-                name: 'St Eustatius: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [17.6, -63.2],
-                name: 'Saba: Allowed to stay 90 days without a visa.',
-                style: {
-                    fill: no_visa
-                }
-            }, {
-                latLng: [11.7, 92.6],
-                name: 'Andaman & Nicobar: The Andaman and Nicobar Islands are territories of India. You need a valid Indian visa to visit the Andaman islands. A Restricted Area Permit is issued free of charge upon arrival at Port Blair. Entry to the Nicobar islands is not permitted to tourists. North Sentinel Island is home to the Sentinelese people who reject any contact with the outside world and entry to the island is not permitted.',
-                style: {
-                    fill: visa
-                }
-            }, {
-                latLng: [45.3, 34.2],
-                name: 'Crimea: Crimea is internationally recognised as part of Ukraine. Crimea was annexed by Russia in 2014 and as of March 2018 remains under its control. As such, to enter Crimea you are required to obtain a Russian visa.',
-                style: {
-                    fill: visa
-                }
-            }, {
-                latLng: [15.1, -23.6],
-                name: 'Cape Verde: It\'s possible to obtain a visa on arrival, although some travellers have reported difficulties and delays.',
-                style: {
-                    fill: visa_on_arrival
-                }
-            }, {
-                latLng: [-7.3, 72.4],
-                name: 'British Indian Ocean Territory: Access to the British Indian Ocean Territory is restricted and a permit is required in advance of travel. There are no commercial flights and permits for yachts are only issued to allow safe passage through the Indian Ocean (outer islands only). Access to Diego Garcia is only permitted to those with connections either to the military facility or to the Territory\'s Administration.',
-                style: {
-                    fill: visa
-                }
-            }];
-
-            var markers_count = 0;
-            for (i = 0; i < Object.keys(markers).length; ++i) {
-                if ('style' in markers[i]) {
-                    markers_count++;
-                }
-            }
-
-            $('#count').text(Object.keys(data).length + markers_count);
-
-            $('#vmap').vectorMap({
-                map: 'world_mill',
-                backgroundColor: 'inhreit',
-                series: {
-                    regions: [{
-                        values: data,
-                        attribute: 'fill'
-                    }]
-                },
-                markerStyle: {
-                    initial: {
-                        fill: '#fff',
-                        stroke: '#383f47'
-                    }
-                },
-                markers: markers,
-                onRegionTipShow: function(e, label, code) {
-                    code = code.toLowerCase();
-                    if (code == 'th') {
-                        label.html('<div class="map-tooltip">Thailand: British passport holders arriving by air or land can enter Thailand for 30 days without a visa - this is known as a visa exemption. If you need to stay longer, it\'s possible to extend your stay once, from the expiry date of the original visa, for up to 30 days.</div>');
-                    } else if (code == 'my') {
-                        label.html('<div class="map-tooltip">Malaysia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'id') {
-                        label.html('<div class="map-tooltip">Indonesia: Allowed to stay 30 days without a visa. Visas can be purchased on arrival valid for 30 days, extendable once for a maximum of 30 days.</div>');
-                    } else if (code == 'cn') {
-                        label.html('<div class="map-tooltip">China: Need a visa.</div>');
-                    } else if (code == 'bn') {
-                        label.html('<div class="map-tooltip">Brunei: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'kh') {
-                        label.html('<div class="map-tooltip">Cambodia: Visa on arrival and eVisa possible.</div>');
-                    } else if (code == 'la') {
-                        label.html('<div class="map-tooltip">Laos: Visa on arrival.</div>');
-                    } else if (code == 'mm') {
-                        label.html('<div class="map-tooltip">Myanmar/Burma: Need a visa.</div>');
-                    } else if (code == 'tw') {
-                        label.html('<div class="map-tooltip">Taiwan: Allowed to stay 90 days without a visa, extendable by 90 days.</div>');
-                    } else if (code == 'jp') {
-                        label.html('<div class="map-tooltip">Japan: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ru') {
-                        label.html('<div class="map-tooltip">Russia: Need a visa.</div>');
-                    } else if (code == 'mn') {
-                        label.html('<div class="map-tooltip">Mongolia: Need a visa.</div>');
-                    } else if (code == 'kp') {
-                        label.html('<div class="map-tooltip">North Korea: Need a visa, but you\'ll likely need to be a part of a group tour.</div>');
-                    } else if (code == 'kr') {
-                        label.html('<div class="map-tooltip">South Korea: Allowed to stay 90 days without a visa.<br><br>NOTE: You cannot cross into North Korea by land without being shot.</div>');
-                    } else if (code == 'ph') {
-                        label.html('<div class="map-tooltip">Philippines: Allowed to stay 30 days without a visa.</div>');
-                    } else if (code == 'pg') {
-                        label.html('<div class="map-tooltip">Papua New Guinea: (Free) visa on arrival for British citizens, valid for 60 days.</div>');
-                    } else if (code == 'au') {
-                        label.html('<div class="map-tooltip">Australia: You need a visa to visit Australia. You can get a free eVisa allowing you to stay for 90 days.</div>');
-                    } else if (code == 'nz') {
-                        label.html('<div class="map-tooltip">New Zealand: Allowed to stay 6 months without a visa providing you have an onward ticket and have enough money for your stay.</div>');
-                    } else if (code == 'in') {
-                        label.html('<div class="map-tooltip">India: Need a visa.</div>');
-                    } else if (code == 'np') {
-                        label.html('<div class="map-tooltip">Nepal: You need a visa to visit Nepal. At some airports and land borders you may be able to obtain a visa on arrival.</div>');
-                    } else if (code == 'bt') {
-                        label.html('<div class="map-tooltip">Bhutan: Need a visa.</div>');
-                    } else if (code == 'bd') {
-                        label.html('<div class="map-tooltip">Bangladesh: Visa on arrival valid for 30 days.</div>');
-                    } else if (code == 'fj') {
-                        label.html('<div class="map-tooltip">Fiji: Allowed to stay 4 months without a visa, providing you have a return/onward ticket and a valid visa for the next country you\'re traveling to.</div>');
-                    } else if (code == 'tl') {
-                        label.html('<div class="map-tooltip">East Timor (Timor-Leste): You need a visa to visit East Timor. At some *ports you may be able to obtain a single entry visa on arrival valid for 30 days.</div>');
-                    } else if (code == 'gb') {
-                        label.html('<div class="map-tooltip">United Kingdom: You can travel between England, Wales, Scotland, and Northern Ireland without needing a passport or visa. You may need some form of photographic ID, especially if you\'re traveling by air.</div>');
-                    } else if (code == 'ie') {
-                        label.html('<div class="map-tooltip">Ireland: As Ireland is a part of the Common Travel Area, you do not need a passport to visit Ireland. However, you may be asked to prove your nationality under certain circumstances.</div>');
-                    } else if (code == 'pk') {
-                        label.html('<div class="map-tooltip">Pakistan: Need a visa.</div>');
-                    } else if (code == 'af') {
-                        label.html('<div class="map-tooltip">Afghanistan: Need a visa.</div>');
-                    } else if (code == 'ir') {
-                        label.html('<div class="map-tooltip">Iran: Need a visa.<br><br>NOTE: You can stay on Kish Island for 14 days without needing a visa.</div>');
-                    } else if (code == 'om') {
-                        label.html('<div class="map-tooltip">Oman: Visa on arrival valid for 30 days and extendable for 30 days.</div>');
-                    } else if (code == 'ye') {
-                        label.html('<div class="map-tooltip">Yemen: Need a visa. If you\'re staying for more than 14 days you\'ll need to register your passport after arrival in country with the Yemen immigration authorities.</div>');
-                    } else if (code == 'sa') {
-                        label.html('<div class="map-tooltip">Saudi Arabia: Need a visa. If you\'re a British Muslim you may face entry restrictions at certain times during the year.</div>');
-                    } else if (code == 'qa') {
-                        label.html('<div class="map-tooltip">Qatar: 30 day visa waiver. If you hold another type of British passport you need a visa.</div>');
-                    } else if (code == 'iq') {
-                        label.html('<div class="map-tooltip">Iraq: Need a visa.</div>');
-                    } else if (code == 'kg') {
-                        label.html('<div class="map-tooltip">Kyrgyzstan: Allowed to stay 60 days without a visa.</div>');
-                    } else if (code == 'uz') {
-                        label.html('<div class="map-tooltip">Uzbekistan: Need a visa.</div>');
-                    } else if (code == 'ge') {
-                        label.html('<div class="map-tooltip">Georgia: Allowed to stay 1 year without a visa.</div>');
-                    } else if (code == 'am') {
-                        label.html('<div class="map-tooltip">Armenia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'is') {
-                        label.html('<div class="map-tooltip">Iceland: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'vu') {
-                        label.html('<div class="map-tooltip">Vanuatu: Allowed to stay 30 days without a visa providing you have an onward or return ticket.</div>');
-                    } else if (code == 'no') {
-                        label.html('<div class="map-tooltip">Norway: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ch') {
-                        label.html('<div class="map-tooltip">Switzerland: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ua') {
-                        label.html('<div class="map-tooltip">Ukraine: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'za') {
-                        label.html('<div class="map-tooltip">South Africa: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ls') {
-                        label.html('<div class="map-tooltip">Lesotho: Visa on arrival valid for 30 days.</div>');
-                    } else if (code == 'sz') {
-                        label.html('<div class="map-tooltip">Swaziland: Allowed to stay 30 days without a visa.</div>');
-                    } else if (code == 'tn') {
-                        label.html('<div class="map-tooltip">Tunisia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'dz') {
-                        label.html('<div class="map-tooltip">Algeria: Need a visa.</div>');
-                    } else if (code == 'ml') {
-                        label.html('<div class="map-tooltip">Mali: Need a visa.</div>');
-                    } else if (code == 'ne') {
-                        label.html('<div class="map-tooltip">Niger: Need a visa.</div>');
-                    } else if (code == 'td') {
-                        label.html('<div class="map-tooltip">Chad: Need a visa.</div>');
-                    } else if (code == 'ng') {
-                        label.html('<div class="map-tooltip">Nigeria: Need a visa.</div>');
-                    } else if (code == 'cm') {
-                        label.html('<div class="map-tooltip">Cameroon: Need a visa.</div>');
-                    } else if (code == 'ke') {
-                        label.html('<div class="map-tooltip">Kenya: Visas can be obtained on arrival at the airport.</div>');
-                    } else if (code == 'cf') {
-                        label.html('<div class="map-tooltip">Central African Republic: Need a visa.</div>');
-                    } else if (code == 'mr') {
-                        label.html('<div class="map-atooltip">Mauritania: Need a visa. While you may be able to get one on arrival, it can take several hours and is payable in cash only.</div>');
-                    } else if (code == 'sn') {
-                        label.html('<div class="map-atooltip">Senegal: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ma') {
-                        label.html('<div class="map-atooltip">Morocco: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'md') {
-                        label.html('<div class="map-atooltip">Moldova: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'gh') {
-                        label.html('<div class="map-atooltip">Ghana: Need a visa.</div>');
-                    } else if (code == 'lr') {
-                        label.html('<div class="map-atooltip">Liberia: Need a visa.</div>');
-                    } else if (code == 'tg') {
-                        label.html('<div class="map-atooltip">Togo: Need a visa. Visas issued on arrival are limited to 7 days and getting an extension can be time consuming.</div>');
-                    } else if (code == 'er') {
-                        label.html('<div class="map-atooltip">Eritrea: Need a visa.</div>');
-                    } else if (code == 'bf') {
-                        label.html('<div class="map-atooltip">Burkina Faso: Need a visa.</div>');
-                    } else if (code == 'ao') {
-                        label.html('<div class="map-atooltip">Angola: Need a visa.</div>');
-                    } else if (code == 'bi') {
-                        label.html('<div class="map-atooltip">Burundi: Need a visa.</div>');
-                    } else if (code == 'gn') {
-                        label.html('<div class="map-atooltip">Guinea: Need a visa.</div>');
-                    } else if (code == 'gw') {
-                        label.html('<div class="map-atooltip">Guinea-Bissau: Need a visa.</div>');
-                    } else if (code == 'sl') {
-                        label.html('<div class="map-atooltip">Sierra Leone: Need a visa.</div>');
-                    } else if (code == 'cy') {
-                        label.html('<div class="map-atooltip">Cyprus: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'xc') {
-                        label.html('<div class="map-atooltip">North Cyprus: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ba') {
-                        label.html('<div class="map-atooltip">Bosnia and Herzegovina: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'rs') {
-                        label.html('<div class="map-atooltip">Serbia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'mk') {
-                        label.html('<div class="map-atooltip">Macedonia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'al') {
-                        label.html('<div class="map-atooltip">Albania: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'sv') {
-                        label.html('<div class="map-atooltip">El Salvador: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'hn') {
-                        label.html('<div class="map-atooltip">Honduras: 30 day visit entry stamp on arrival. Can be extended up to 90 days by applying at an Immigration Office.</div>');
-                    } else if (code == 'ni') {
-                        label.html('<div class="map-atooltip">Nicaragua: Allowed to stay 90 days without a visa. You may be refused entry if you don\'t have an onward ticket out of Nicaragua.</div>');
-                    } else if (code == 'cr') {
-                        label.html('<div class="map-atooltip">Costa Rica: Allowed to stay 90 days without a visa, although the exact period is at the discretion of the immigration officer on arrival.</div>');
-                    } else if (code == 'bz') {
-                        label.html('<div class="map-atooltip">Belize: Allowed to stay 30 days without a visa.</div>');
-                    } else if (code == 'gt') {
-                        label.html('<div class="map-atooltip">Guatemala: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'pe') {
-                        label.html('<div class="map-atooltip">Peru: Allowed to stay 183 days without a visa. Make sure to double check the period of time you\'ve been granted.</div>');
-                    } else if (code == 'cl') {
-                        label.html('<div class="map-atooltip">Chile: Allowed to stay 89 days without a visa.</div>');
-                    } else if (code == 'ht') {
-                        label.html('<div class="map-atooltip">Haiti: Allowed to stay 90 days without a visa.<br><br>NOTE: Tourists must pay a US $10 tourist fee payable in cash on arrival.</div>');
-                    } else if (code == 'jm') {
-                        label.html('<div class="map-atooltip">Jamaica: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'uy') {
-                        label.html('<div class="map-atooltip">Uruguay: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ar') {
-                        label.html('<div class="map-atooltip">Argentina: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'py') {
-                        label.html('<div class="map-atooltip">Paraguay: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'na') {
-                        label.html('<div class="map-atooltip">Namibia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'bw') {
-                        label.html('<div class="map-atooltip">Botswana: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'gm') {
-                        label.html('<div class="map-atooltip">Gambia: British nationals are given a 28 day stamp in their passports on arrival.</div>');
-                    } else if (code == 'gq') {
-                        label.html('<div class="map-atooltip">Equatorial Guinea: Need a visa.</div>');
-                    } else if (code == 'co') {
-                        label.html('<div class="map-atooltip">Colombia: Allowed to stay 90 days without a visa at the discretion of the Colombian Immigration Officer on arrival. You may need to provide evidence of return or onward travel.</div>');
-                    } else if (code == 'ly') {
-                        label.html('<div class="map-atooltip">Libya: Need a visa. A Libyan visa issued overseas may not be recognised in some areas, due to the current political conflict.</div>');
-                    } else if (code == 'ss') {
-                        label.html('<div class="map-atooltip">South Sudan: Need a visa.</div>');
-                    } else if (code == 'eh') {
-                        label.html('<div class="map-atooltip">Western Sahara: Allowed to stay 90 days without a visa. Travel is restricted and while organised groups are generally permitted, independent travellers should be aware that they could be turned back at the border.</div>');
-                    } else if (code == 'sd') {
-                        label.html('<div class="map-atooltip">Sudan: Need a visa.<br><br>You should register with the Aliens Department at the Ministry of Interior within 3 days of your arrival in the country. You will need two passport size photos. The fee is the Sudanese Pound equivalent of around £35. If you don\'t register within 3 days of arrival, you may be fined. Some of the larger hotels will do this for you but you should ask when you check-in.<br><br>You\'ll need to get an exit visa at the Aliens Department to leave the country.</div>');
-                    } else if (code == 'kz') {
-                        label.html('<div class="map-atooltip">Kazakhstan: Until 31 December 2018 you can travel to Kazakhstan without a visa, provided your stay does not exceed 30 days (the day you arrive counts as day 1, regardless of arrival time). If you wish to stay longer than 30 days, you\'ll need a visa.</div>');
-                    } else if (code == 'br') {
-                        label.html('<div class="map-atooltip">Brazil: Allowed to stay 90 days without a visa, extendable, at the discretion of the Federal Police, for a further 90 days. A return ticket and proof of sufficient funds may be requested on arrival.</div>');
-                    } else if (code == 'fr') {
-                        label.html('<div class="map-atooltip">France: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'de') {
-                        label.html('<div class="map-atooltip">Germany: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'nl') {
-                        label.html('<div class="map-atooltip">Netherlands: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'es') {
-                        label.html('<div class="map-atooltip">Spain: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'pt') {
-                        label.html('<div class="map-atooltip">Portugal: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'be') {
-                        label.html('<div class="map-atooltip">Belgium: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'lu') {
-                        label.html('<div class="map-atooltip">Luxembourg: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'it') {
-                        label.html('<div class="map-atooltip">Italy: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'pl') {
-                        label.html('<div class="map-atooltip">Poland: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'cz') {
-                        label.html('<div class="map-atooltip">Czech Republic: Allowed to stay 90 days without a visa. If you intend to stay longer than 30 days you need to register with Czech Foreign Police.</div>');
-                    } else if (code == 'sk') {
-                        label.html('<div class="map-atooltip">Slovakia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'at') {
-                        label.html('<div class="map-atooltip">Austria: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'si') {
-                        label.html('<div class="map-atooltip">Slovenia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'hr') {
-                        label.html('<div class="map-atooltip">Croatia: Allowed to stay 90 days without a visa. You may be asked to produce evidence of the financial means necessary to cover your stay and return or onward trip.</div>');
-                    } else if (code == 'hu') {
-                        label.html('<div class="map-atooltip">Hungary: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'dk') {
-                        label.html('<div class="map-atooltip">Denmark: Allowed to stay 90 days without a visa.<br><br>On 4 January 2016, the Danish authorities increased border controls at the land border with Germany. If you\'re travelling to Denmark from Germany using the land border, you should make sure you have your passport with you.<br><br>The Swedish authorities have announced additional immigration controls when entering Sweden, including when travelling from Denmark to Sweden. This may cause delays to your journey and you should make sure you carry a passport or other valid identity document with you if you plan to travel from Denmark to Sweden.</div>');
-                    } else if (code == 'gl') {
-                        label.html('<div class="map-atooltip">Greenland: No visa needed for tourism, but you should get a work and residence permit before entry if you intend to live and work there.</div>');
-                    } else if (code == 'fi') {
-                        label.html('<div class="map-atooltip">Finland: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'se') {
-                        label.html('<div class="map-atooltip">Sweden: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'me') {
-                        label.html('<div class="map-atooltip">Montenegro: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ro') {
-                        label.html('<div class="map-atooltip">Romania: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'bg') {
-                        label.html('<div class="map-atooltip">Bulgaria: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'gr') {
-                        label.html('<div class="map-atooltip">Greece: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ee') {
-                        label.html('<div class="map-atooltip">Estonia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'lv') {
-                        label.html('<div class="map-atooltip">Latvia: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'lt') {
-                        label.html('<div class="map-atooltip">Lithuania: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'mg') {
-                        label.html('<div class="map-atooltip">Madagascar: Non-extendable 30 day tourist visa available for purchase at the airport on arrival.</div>');
-                    } else if (code == 'ca') {
-                        label.html('<div class="map-atooltip">Canada: You\'ll need to get an Electronic Travel Authorization (eTA) if you\'re entering Canada by air. If you\'re travelling by land or sea, you won\'t need an eTA when you enter Canada. However, you must travel with acceptable travel documents and identification.</div>');
-                    } else if (code == 'dj') {
-                        label.html('<div class="map-atooltip">Djibouti: Need a visa. Visas on arrival are issued at the discretion of the Djibouti immigration authorities, so you should get a visa before you travel. You must also have evidence of your onward journey.</div>');
-                    } else if (code == 'xs') {
-                        label.html('<div class="map-atooltip">Somaliland: Need a visa.</div>');
-                    } else if (code == 'so') {
-                        label.html('<div class="map-atooltip">Somalia: Need a visa. If you arrive at Mogadishu International Airport, you can get a single entry visa, valid for one month, for US$60 in cash.</div>');
-                    } else if (code == 'il') {
-                        label.html('<div class="map-atooltip">Israel: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'ps') {
-                        label.html('<div class="map-atooltip">Palestine: Access to Palestine can be complex. This will be updated eventually.</div>');
-                    } else if (code == 'bj') {
-                        label.html('<div class="map-atooltip">Benin: You are strongly advised to get a visa before travel. Visas aren\'t routinely issued on arrival.</div>');
-                    } else if (code == 'ci') {
-                        label.html('<div class="map-atooltip">Côte d\'Ivoire: Need a visa.</div>');
-                    } else if (code == 'ga') {
-                        label.html('<div class="map-atooltip">Gabon: Need a visa.</div>');
-                    } else if (code == 'cd') {
-                        label.html('<div class="map-atooltip">Democratic Republic of the Congo: Need a visa.</div>');
-                    } else if (code == 'cg') {
-                        label.html('<div class="map-atooltip">Congo: Need a visa.</div>');
-                    } else if (code == 'eg') {
-                        label.html('<div class="map-atooltip">Egypt: For visits of up to 30 days, you can get a visa on arrival by payment in Sterling, US Dollars or Euros; the visa fee is US$25 at approved bank kiosks within airport arrival halls, before reaching immigration counters.<br><br>British nationals travelling to Sharm el Sheikh, Dahab, Nuweiba and Taba resorts for up to 15 days receive a free entry permission stamp upon arrival. If you intend to travel out of these areas or stay longer than 15 days, you must get a visa.</div>');
-                    } else if (code == 'ug') {
-                        label.html('<div class="map-atooltip">Uganda: Need a visa.</div>');
-                    } else if (code == 'rw') {
-                        label.html('<div class="map-atooltip">Rwanda: 30 day tourist visas are available on arrival for £20 or $30. You can pay in cash (sterling, US dollars or Rwandan francs) or by Visa/Mastercard. Payment by credit card may not be available at all land border crossings.</div>');
-                    } else if (code == 'pa') {
-                        label.html('<div class="map-atooltip">Panama: British nationals don\'t need a visa to visit Panama except if arriving by sea. An initial stay of 180 days is granted on entry to Panama. You must have a return or onward ticket and the equivalent of US$500 or a credit card.</div>');
-                    } else if (code == 'tt') {
-                        label.html('<div class="map-atooltip">Trinidad and Tobago: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'nc') {
-                        label.html('<div class="map-atooltip">New Caledonia: Allowed to stay 90 days without a visa.');
-                    } else if (code == 'by') {
-                        label.html('<div class="map-atooltip">Belarus: All British national passport holders (except those entering on a diplomatic or official passport) can now enter Belarus for a maximum of 5 days without a visa (the day you arrive counts as day one, regardless of arrival time). Entry and exit will only be allowed at Minsk International Airport and you\'ll need to show documentary evidence of medical insurance to the value of 10,000 euros and funds equivalent to 25 euros per day. This can be in the form of cash, credit card or travellers cheques in any currency.</div>');
-                    } else if (code == 'ec') {
-                        label.html('<div class="map-atooltip">Ecuador: Allowed to stay 90 days without a visa, but you may be asked about your reason for travel and may need to provide evidence of a return or onward flight/bus ticket when you arrive.</div>');
-                    } else if (code == 've') {
-                        label.html('<div class="map-atooltip">Venezuela: If you\'re arriving by air, you can enter for up to 90 days on a tourist card issued on arrival. You must have a valid return ticket. If you\'re arriving overland or by sea, you must get a visa in advance from your nearest Venezuelan Embassy or Consulate.</div>');
-                    } else if (code == 'gy') {
-                        label.html('<div class="map-atooltip">Guyana: Allowed to stay 30 days without a visa, but extensions can usually be obtained from the Ministry of Home Affairs in Georgetown.</div>');
-                    } else if (code == 'mw') {
-                        label.html('<div class="map-atooltip">Malawi: The Malawi authorities strongly advise you to get a visa before travel. If you can\'t get a visa before travel, you can get a visa on arrival at any port of entry.</div>');
-                    } else if (code == 'lk') {
-                        label.html('<div class="map-atooltip">Sri Lanka: Need a visa. Although it\'s still possible to get a tourist visa on arrival, it\'s better to get one before you travel.</div>');
-                    } else if (code == 'mx') {
-                        label.html('<div class="map-atooltip">Mexico: Allowed to stay 180 days without a visa, but you\'ll need to complete an immigration form and have this with you when you enter and leave Mexico.</div>');
-                    } else if (code == 'sy') {
-                        label.html('<div class="map-atooltip">Syria: Need a visa.</div>');
-                    } else if (code == 'et') {
-                        label.html('<div class="map-atooltip">Ethiopia: Need a visa. Visas on arrival are only available for tourists at Addis Ababa (Bole) International airport, at a cost of approximately $US50 for 1 month and $US75 for 3 months (Euros, US dollars and Ethiopian birr are all accepted). All other categories of visitor must get a visa from the Ethiopian Embassy closest to their place of legal residence before travelling.</div>');
-                    } else if (code == 'sr') {
-                        label.html('<div class="map-atooltip">Suriname: British passport holders visiting Suriname as tourists and arriving at Johan Adolf Pengel International Airport in Paramaribo can get a single entry tourist card on arrival. The inital stay is for 30 days, however this can be extended to a maximum of 90 days at the Immigration Dept.</div>');
-                    } else if (code == 'ae') {
-                        label.html('<div class="map-atooltip">United Arab Emirates: If you\'re a British Citizen you can get a visitor\'s visa on arrival in the UAE. In the past, this visa has allowed the visitor to stay in the UAE for up to 30 days. The visa has terminated automatically on departure and a new visa issued on arrival each time the same visitor returns to the UAE.<br><br>That approach continues to be applied in most cases, but in some cases British citizens (and visitors of some other nationalities) who have left the UAE and returned again within the 30 day period of stay granted at the time of the first arrival, haven\'t received a new visa. Instead their stay has been limited to the initial 30 day period.</div>');
-                    } else if (code == 'lb') {
-                        label.html('<div class="map-atooltip">Lebanon: British citizens can apply for a free single entry tourist or family visit visa on arrival. Entry requirements are subject to change, so you should check with the Lebanese Embassy before you travel.</div>');
-                    } else if (code == 'kw') {
-                        label.html('<div class="map-atooltip">Kuwait: Regardless of age, British nationals travelling by air can get a free 30-day entry permit/tourist visa, or a 90-day visit/business visa for a fee, on arrival. The immigration authorities may ask to see evidence of return or onward travel, a sponsor\'s letter and hotel confirmation.<br><br>If you are arriving by land or sea, you should obtain visas in advance from the Kuwaiti Embassy in London.</div>');
-                    } else if (code == 'bs') {
-                        label.html('<div class="map-atooltip">Bahamas: British nationals visiting are usually allowed entry into the Bahamas for up to 21 days. This can be extended up to a maximum of 8 months by applying to the Department of Immigration in Nassau.<br><br>If you are travelling via the USA, you may need to apply for an ESTA. The Bahamas counts as part of the \'contiguous territory and islands\' for US visa waiver purposes and time spent in The Bahamas counts towards the 90 day maximum permitted stay in the US under this waiver.</div>');
-                    } else if (code == 'az') {
-                        label.html('<div class="map-atooltip">Azerbaijan: Need a visa.</div>');
-                    } else if (code == 'zw') {
-                        label.html('<div class="map-atooltip">Zimbabwe: You can purchase a visa on arrival.</div>');
-                    } else if (code == 'sb') {
-                        label.html('<div class="map-atooltip">Soloman Is.: Allowed to stay 90 days without a visa. You need an onward ticket, and sufficient funds to cover your stay.</div>');
-                    } else if (code == 'bo') {
-                        label.html('<div class="map-atooltip">Bolivia: British nationals don\'t need a visa to visit Bolivia. The length of stay permitted on entering Bolivia is initially 30 days. This can be extended for a further 60 days, at no extra charge, as long as you apply before the end of the 30 day period at one of the Department of Immigration offices throughout the country.<br><br>Your passport must contain an entry stamp, otherwise you\'ll have to pay a fine to leave.</div>');
-                    } else if (code == 'cu') {
-                        label.html('<div class="map-atooltip">Cuba: Need a visa. If you\'re entering Cuba as a tourist, you\'ll need to get a tourist card before you travel.<br><br>If you\'re a dual national, you should contact the Cuban Embassy for advice on entry requirements before you travel.<br><br>There\'s a mandatory airport tax of 25 Cuban convertible pesos (CUCs). This fee should be included in the cost of your airline ticket. If in doubt, check with your airline.</div>');
-                    } else if (code == 'fk') {
-                        label.html('<div class="map-atooltip">Falkland Islands: British nationals do not need a visa to enter the Falkland Islands, but you may need a visa to transit Chile. There are no facilities to issue Chilean visas on the Falkland Islands. You must have a passport valid for the proposed duration of your stay, a return air ticket (or other evidence of pre‑paid onward travel), evidence of accommodation with family/friends/hotel/business, sufficient funds to cover your stay in the Islands. There is a £22 departure tax on leaving the Islands that is not included on LATAM airline flight tickets.</div>');
-                    } else if (code == 'vn') {
-                        label.html('<div class="map-atooltip">Vietnam: Until 30 June 2021 \'British Citizen\' passport holders travelling for tourism or business can enter Vietnam for up to a maximum of 15 days (inclusive of dates of entry and exit) without a visa. If you have a different type of British nationality – for example \'British national (overseas)\' you\'ll need to get a visa before entering Vietnam. For visits of up to 30 days, you can get an e-visa online before you travel. Use of the e-visa is limited to certain entry/exit points which you must select at the time of application. If you don\'t have fixed travel plans, consider applying for a regular single entry visa from the nearest Vietnamese Embassy, which allows more flexibility.</div>');
-                    } else if (code == 'xk') {
-                        label.html('<div class="map-atooltip">Kosovo: British nationals don\'t need a visa to enter Kosovo. You may be asked to provide documentary evidence giving a reason for your stay. A 90-day entry stamp will be issued which is renewable for longer stays. The authorities in Serbia don\'t consider the designated crossing points from Kosovo to be official ‘\'international\' border crossing points.</div>');
-                    } else {
-                        label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
-                    }
-                },
-                onRegionClick: function(e, code) {
-                    code = code.toLowerCase();
-                    if (code == 'th') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/thailand/entry-requirements';
-                    } else if (code == 'my') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/malaysia/entry-requirements';
-                    } else if (code == 'id') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/indonesia/entry-requirements';
-                    } else if (code == 'cn') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/china/entry-requirements';
-                    } else if (code == 'bn') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/brunei/entry-requirements';
-                    } else if (code == 'kh') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/cambodia/entry-requirements';
-                    } else if (code == 'la') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/laos/entry-requirements';
-                    } else if (code == 'mm') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/burma/entry-requirements';
-                    } else if (code == 'tw') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/taiwan/entry-requirements';
-                    } else if (code == 'jp') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/japan/entry-requirements';
-                    } else if (code == 'ru') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/russia/entry-requirements';
-                    } else if (code == 'mn') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/mongolia/entry-requirements';
-                    } else if (code == 'kp') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/north-korea/entry-requirements';
-                    } else if (code == 'kr') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/south-korea/entry-requirements';
-                    } else if (code == 'ph') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/philippines/entry-requirements';
-                    } else if (code == 'pg') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/papua-new-guinea/entry-requirements';
-                    } else if (code == 'au') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/australia/entry-requirements';
-                    } else if (code == 'nz') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/new-zealand/entry-requirements';
-                    } else if (code == 'in') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/india/entry-requirements';
-                    } else if (code == 'np') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/nepal/entry-requirements';
-                    } else if (code == 'bt') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/bhutan/entry-requirements';
-                    } else if (code == 'bd') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/bangladesh/entry-requirements';
-                    } else if (code == 'fj') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/fiji/entry-requirements';
-                    } else if (code == 'tl') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/timor-leste/entry-requirements';
-                    } else if (code == 'ie') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/ireland/entry-requirements';
-                    } else if (code == 'pk') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/pakistan/entry-requirements';
-                    } else if (code == 'af') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/afghanistan/entry-requirements';
-                    } else if (code == 'ir') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/iran/entry-requirements';
-                    } else if (code == 'om') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/oman/entry-requirements';
-                    } else if (code == 'ye') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/yemen/entry-requirements';
-                    } else if (code == 'sa') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/saudi-arabia/entry-requirements';
-                    } else if (code == 'qa') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/qatar/entry-requirements';
-                    } else if (code == 'iq') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/iraq/entry-requirements';
-                    } else if (code == 'kg') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/kyrgyzstan/entry-requirements';
-                    } else if (code == 'uz') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/uzbekistan/entry-requirements';
-                    } else if (code == 'ge') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/georgia/entry-requirements';
-                    } else if (code == 'am') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/armenia/entry-requirements';
-                    } else if (code == 'is') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/iceland/entry-requirements';
-                    } else if (code == 'vu') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/vanuatu/entry-requirements';
-                    } else if (code == 'no') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/norway/entry-requirements';
-                    } else if (code == 'ch') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/switzerland/entry-requirements';
-                    } else if (code == 'ua') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/ukraine/entry-requirements';
-                    } else if (code == 'za') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/south-africa/entry-requirements';
-                    } else if (code == 'ls') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/lesotho/entry-requirements';
-                    } else if (code == 'sz') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/swaziland/entry-requirements';
-                    } else if (code == 'tn') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/tunisia/entry-requirements';
-                    } else if (code == 'dz') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/algeria/entry-requirements';
-                    } else if (code == 'ml') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/mali/entry-requirements';
-                    } else if (code == 'ne') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/niger/entry-requirements';
-                    } else if (code == 'td') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/chad/entry-requirements';
-                    } else if (code == 'ng') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/nigeria/entry-requirements';
-                    } else if (code == 'cm') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/cameroon/entry-requirements';
-                    } else if (code == 'ke') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/kenya/entry-requirements';
-                    } else if (code == 'cf') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/central-african-republic/entry-requirements';
-                    } else if (code == 'mr') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/mauritania/entry-requirements';
-                    } else if (code == 'sn') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/senegal/entry-requirements';
-                    } else if (code == 'ma') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/morocco/entry-requirements';
-                    } else if (code == 'md') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/moldova/entry-requirements';
-                    } else if (code == 'gh') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/ghana/entry-requirements';
-                    } else if (code == 'lr') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/liberia/entry-requirements';
-                    } else if (code == 'tg') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/togo/entry-requirements';
-                    } else if (code == 'er') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/eritrea/entry-requirements';
-                    } else if (code == 'bf') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/burkina-faso/entry-requirements';
-                    } else if (code == 'ao') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/angola/entry-requirements';
-                    } else if (code == 'bi') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/burundi/entry-requirements';
-                    } else if (code == 'gn') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/guinea/entry-requirements';
-                    } else if (code == 'gw') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/guinea-bissau/entry-requirements';
-                    } else if (code == 'sl') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/sierra-leone/entry-requirements';
-                    } else if (code == 'cy') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/cyprus/entry-requirements';
-                    } else if (code == 'xc') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/cyprus/entry-requirements';
-                    } else if (code == 'ba') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/bosnia-and-herzegovina/entry-requirements';
-                    } else if (code == 'rs') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/serbia/entry-requirements';
-                    } else if (code == 'mk') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/macedonia/entry-requirements';
-                    } else if (code == 'al') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/albania/entry-requirements';
-                    } else if (code == 'sv') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/el-salvador/entry-requirements';
-                    } else if (code == 'hn') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/honduras/entry-requirements';
-                    } else if (code == 'ni') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/nicaragua/entry-requirements';
-                    } else if (code == 'cr') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/costa-rica/entry-requirements';
-                    } else if (code == 'bz') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/belize/entry-requirements';
-                    } else if (code == 'gt') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/guatemala/entry-requirements';
-                    } else if (code == 'pe') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/peru/entry-requirements';
-                    } else if (code == 'cl') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/chile/entry-requirements';
-                    } else if (code == 'ht') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/haiti/entry-requirements';
-                    } else if (code == 'jm') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/jamaica/entry-requirements';
-                    } else if (code == 'uy') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/uraguay/entry-requirements';
-                    } else if (code == 'ar') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/argentina/entry-requirements';
-                    } else if (code == 'py') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/paraguay/entry-requirements';
-                    } else if (code == 'na') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/namibia/entry-requirements';
-                    } else if (code == 'bw') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/botswana/entry-requirements';
-                    } else if (code == 'gm') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/gambia/entry-requirements';
-                    } else if (code == 'gq') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/equatorial-guinea/entry-requirements';
-                    } else if (code == 'co') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/colombia/entry-requirements';
-                    } else if (code == 'ly') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/libya/entry-requirements';
-                    } else if (code == 'ss') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/south-sudan/entry-requirements';
-                    } else if (code == 'eh') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/western-sahara/entry-requirements';
-                    } else if (code == 'sd') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/sudan/entry-requirements';
-                    } else if (code == 'kz') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/kazakhstan/entry-requirements';
-                    } else if (code == 'br') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/brazil/entry-requirements';
-                    } else if (code == 'fr') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/france/entry-requirements';
-                    } else if (code == 'de') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/germany/entry-requirements';
-                    } else if (code == 'nl') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/netherlands/entry-requirements';
-                    } else if (code == 'es') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/spain/entry-requirements';
-                    } else if (code == 'pt') {
-                        label.html('<div class="map-atooltip">Portugal: Allowed to stay 90 days without a visa.</div>');
-                    } else if (code == 'be') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/belgium/entry-requirements';
-                    } else if (code == 'lu') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/luxembourg/entry-requirements';
-                    } else if (code == 'it') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/italy/entry-requirements';
-                    } else if (code == 'pl') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/poland/entry-requirements';
-                    } else if (code == 'cz') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/czech-republic/entry-requirements';
-                    } else if (code == 'sk') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/slovakia/entry-requirements';
-                    } else if (code == 'at') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/austria/entry-requirements';
-                    } else if (code == 'si') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/slovenia/entry-requirements';
-                    } else if (code == 'hr') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/croatia/entry-requirements';
-                    } else if (code == 'hu') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/hungary/entry-requirements';
-                    } else if (code == 'dk') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/denmark/entry-requirements';
-                    } else if (code == 'gl') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/denmark/entry-requirements';
-                    } else if (code == 'fi') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/finland/entry-requirements';
-                    } else if (code == 'se') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/sweden/entry-requirements';
-                    } else if (code == 'me') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/montenegro/entry-requirements';
-                    } else if (code == 'ro') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/romania/entry-requirements';
-                    } else if (code == 'bg') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/bulgaria/entry-requirements';
-                    } else if (code == 'gr') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/greece/entry-requirements';
-                    } else if (code == 'ee') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/estonia/entry-requirements';
-                    } else if (code == 'lv') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/latvia/entry-requirements';
-                    } else if (code == 'lt') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/lithuania/entry-requirements';
-                    } else if (code == 'mg') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/madagascar/entry-requirements';
-                    } else if (code == 'ca') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/canada/entry-requirements';
-                    } else if (code == 'dj') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/djibouti/entry-requirements';
-                    } else if (code == 'xs') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/somaliland/entry-requirements';
-                    } else if (code == 'so') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/somalia/entry-requirements';
-                    } else if (code == 'il') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/israel/entry-requirements';
-                    } else if (code == 'ps') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/israel/entry-requirements';
-                    } else if (code == 'bj') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/benin/entry-requirements';
-                    } else if (code == 'ci') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/cote-d-ivoire/entry-requirements';
-                    } else if (code == 'ga') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/gabon/entry-requirements';
-                    } else if (code == 'cd') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/democratic-republic-of-the-congo/entry-requirements';
-                    } else if (code == 'cg') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/congo/entry-requirements';
-                    } else if (code == 'eg') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/egypt/entry-requirements';
-                    } else if (code == 'ug') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/uganda/entry-requirements';
-                    } else if (code == 'rw') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/rwanda/entry-requirements';
-                    } else if (code == 'pa') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/panama/entry-requirements';
-                    } else if (code == 'tt') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/trinidad-and-tobago/entry-requirements';
-                    } else if (code == 'nc') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/new-caledonia/entry-requirements';
-                    } else if (code == 'by') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/belarus/entry-requirements';
-                    } else if (code == 'ec') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/ecuador/entry-requirements';
-                    } else if (code == 've') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/venezuela/entry-requirements';
-                    } else if (code == 'gy') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/guyana/entry-requirements';
-                    } else if (code == 'mw') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/malawi/entry-requirements';
-                    } else if (code == 'lk') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/sri-lanka/entry-requirements';
-                    } else if (code == 'mx') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/mexico/entry-requirements';
-                    } else if (code == 'sy') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/syria/entry-requirements';
-                    } else if (code == 'et') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/ethiopia/entry-requirements';
-                    } else if (code == 'sr') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/suriname/entry-requirements';
-                    } else if (code == 'ae') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/united-arab-emirates/entry-requirements';
-                    } else if (code == 'lb') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/lebanon/entry-requirements';
-                    } else if (code == 'kw') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/kuwait/entry-requirements';
-                    } else if (code == 'bs') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/bahamas/entry-requirements';
-                    } else if (code == 'zw') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/zimbabwe/entry-requirements';
-                    } else if (code == 'sb') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/solomon-islands/entry-requirements';
-                    } else if (code == 'bo') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/bolivia/entry-requirements';
-                    } else if (code == 'cu') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/cuba/entry-requirements';
-                    } else if (code == 'fk') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/falkland-islands/entry-requirements';
-                    } else if (code == 'vn') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/vietnam/entry-requirements';
-                    } else if (code == 'xk') {
-                        window.location = 'https://www.gov.uk/foreign-travel-advice/kosovo/entry-requirements';
-                    }
-                }
-            });
-        });
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+        .register('/assets/js/sw.js')
+        .then(function() { console.log("Service Worker Registered"); });
+    }
     </script>
-
-    <body>
-        <div id="header">
-            <a href="/" id="title">British Citizen Tourist Map</a> <span id="subtitle" class="hidden-xs">Entry requirements for <abbr title="People with a full 'British Citizen' passport.">British citizens</abbr> who want to travel the world.</span> <span id="header-right" class="hidden-xs"><span id="count">0</span> Locations</span>
-        </div>
-        <noscript>
-            <div id="noscript">
-                <strong>Hey!</strong> To display the map you need to have Javascript enabled. Cheers!
-            </div>
-        </noscript>
-        <div id="vmap"></div>
-        <div id="footer">
-            <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="You must obtain a visa or other prior authorization before traveling. You cannot get a visa on arrival.">
-                <div class="square square-visa"></div>&nbsp;=&nbsp;Visa Required Before Arrival&nbsp;
-            </div>
-            <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="No visa is required to enter. The length you will be allowed to stay may vary.">
-                <div class="square square-no-visa"></div>&nbsp;=&nbsp;Visa Not Required&nbsp;
-            </div>
-            <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="No visa is required to enter and you will be allowed to stay initally for no longer than 30 days. You may be able to extend your stay without obtaining a visa.">
-                <div class="square square-no-visa-less-than-one-month"></div>&nbsp;=&nbsp;Visa Not Required (1 Month or Less)&nbsp;
-            </div>
-            <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="You can obtain a visa on arrival. This may be specific to certain ports or crossings. The length you will be allowed to stay may vary.">
-                <div class="square square-visa-on-arrival"></div>&nbsp;=&nbsp;Visa On Arrival&nbsp;
-            </div>
-            <div id="credit">
-                <a href="https://github.com/touristmap/touristmap.github.io" target="_blank">Made with <i class="icon ion-heart" style="color: #e25555;"></i> in Britain</a>
-            </div>
-        </div>
-
-	<script>
-	if('serviceWorker' in navigator) {
-	  navigator.serviceWorker
-		   .register('/assets/js/sw.js')
-		   .then(function() { console.log("Service Worker Registered"); });
-	}
-	</script>
-    </body>
+  </body>
 
 </html>
