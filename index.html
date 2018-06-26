@@ -343,6 +343,7 @@
         "TN": no_visa,
         "TT": no_visa,
         "TW": no_visa,
+        "TZ": visa_on_arrival,
         "UA": no_visa,
         "UG": visa,
         "US": visa,
@@ -1104,6 +1105,8 @@
             label.html('<div class="map-atooltip">Puerto Rico: Puerto Rico is an unincorporated territory of the United States. Please see travel advice for the USA.</div>');
           } else if (code == 'tf') {
             label.html('<div class="map-atooltip">French Southern and Antarctic Lands: A permit is required to visit the French Southern and Antarctic Lands. The Marion Dufresne, an oceanographic ship, travels four times a year from Reunion to the isles.</div>');
+          } else if (code == 'tz') {
+            label.html('<div class="map-atooltip">Tanzania: All British passport holders need a tourist or business visa to enter Tanzania. You should get one from the Tanzanian High Commission before you travel. It is possible to get a tourist or business visa for a single entry on arrival at main ports of entry to Tanzania, but this is subject to the fulfilment of all immigration requirements. You may be asked to provide proof of your return journey. You won\'t be able to get a multiple entry visa on arrival.</div>');
           } else {
             label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
           }
@@ -1440,6 +1443,8 @@
             window.location = 'https://www.gov.uk/foreign-travel-advice/dominican-republic/entry-requirements';
           } else if (code == 'us' || code == 'pr') {
             window.location = 'https://www.gov.uk/foreign-travel-advice/usa/entry-requirements';
+          } else if (code == 'tz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/tanzania/entry-requirements';
           }
         }
       });
