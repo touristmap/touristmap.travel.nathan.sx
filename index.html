@@ -228,6 +228,7 @@
         "DE": no_visa,
         "DJ": visa_on_arrival,
         "DK": no_visa,
+        "DO": no_visa_less_than_one_month,
         "DZ": visa,
         "EC": no_visa,
         "EE": no_visa,
@@ -1092,6 +1093,8 @@
             label.html('<div class="map-atooltip">Vietnam: Until 30 June 2021 \'British Citizen\' passport holders travelling for tourism or business can enter Vietnam for up to a maximum of 15 days (inclusive of dates of entry and exit) without a visa. If you have a different type of British nationality – for example \'British national (overseas)\' you\'ll need to get a visa before entering Vietnam. For visits of up to 30 days, you can get an e-visa online before you travel. Use of the e-visa is limited to certain entry/exit points which you must select at the time of application. If you don\'t have fixed travel plans, consider applying for a regular single entry visa from the nearest Vietnamese Embassy, which allows more flexibility.</div>');
           } else if (code == 'xk') {
             label.html('<div class="map-atooltip">Kosovo: British nationals don\'t need a visa to enter Kosovo. You may be asked to provide documentary evidence giving a reason for your stay. A 90-day entry stamp will be issued which is renewable for longer stays. The authorities in Serbia don\'t consider the designated crossing points from Kosovo to be official ‘\'international\' border crossing points.</div>');
+          } else if (code == 'do') {
+            label.html('<div class="map-atooltip">Dominican Republic: British Citizens travelling to the Dominican Republic for tourism don\'t need a visa. On arrival you will normally be granted a 30-day stay. This can be extended to 60 days by paying for an extension when you leave the country. You may be refused entry if you don\'t have proof of onward or return travel. Departure tax is US$20. Scheduled airlines often include this charge in the price of the ticket. Check with your tour operator or travel provider.</div>');
           } else {
             label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
           }
@@ -1424,6 +1427,8 @@
             window.location = 'https://www.gov.uk/foreign-travel-advice/vietnam/entry-requirements';
           } else if (code == 'xk') {
             window.location = 'https://www.gov.uk/foreign-travel-advice/kosovo/entry-requirements';
+          } else if (code == 'do') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/dominican-republic/entry-requirements';
           }
         }
       });
