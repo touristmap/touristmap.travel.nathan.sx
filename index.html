@@ -336,6 +336,7 @@
         "SY": visa,
         "SZ": no_visa_less_than_one_month,
         "TD": visa,
+        "TF": visa,
         "TG": visa_on_arrival,
         "TH": no_visa_less_than_one_month,
         "TL": visa_on_arrival,
@@ -1101,6 +1102,8 @@
             label.html('<div class="map-atooltip">USA: Most passport holders can get an Electronic System for Travel Authorisation (ESTA) through the Visa Waiver Programme, which allows travel to the US for up to 90 days. If you\'re arriving by land or on a ferry from Vancouver or Victoria in Canada, you don\'t need to complete an ESTA before you arrive at the border. If you don\'t qualify for entry under the VWP, and don\'t have a US Permanent Resident Card, you should apply for a visa from the nearest US Embassy or Consulate before travelling.</div>');
           } else if (code == 'pr') {
             label.html('<div class="map-atooltip">Puerto Rico: Puerto Rico is an unincorporated territory of the United States. Please see travel advice for the USA.</div>');
+          } else if (code == 'tf') {
+            label.html('<div class="map-atooltip">French Southern and Antarctic Lands: A permit is required to visit the French Southern and Antarctic Lands. The Marion Dufresne, an oceanographic ship, travels four times a year from Reunion to the isles.</div>');
           } else {
             label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
           }
