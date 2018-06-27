@@ -297,6 +297,7 @@
         "MW": visa_on_arrival,
         "MX": no_visa,
         "MY": no_visa,
+        "MZ": visa,
         "NA": no_visa,
         "NC": no_visa,
         "NE": visa,
@@ -1110,6 +1111,8 @@
             label.html('<div class="map-atooltip">Tanzania: All British passport holders need a tourist or business visa to enter Tanzania. You should get one from the Tanzanian High Commission before you travel. It is possible to get a tourist or business visa for a single entry on arrival at main ports of entry to Tanzania, but this is subject to the fulfilment of all immigration requirements. You may be asked to provide proof of your return journey. You won\'t be able to get a multiple entry visa on arrival.</div>');
           } else if (code == 'jo') {
             label.html('<div class="map-atooltip">Jordan: You\'ll need a visa to enter Jordan. You can get a single entry visa valid for 1 month on arrival at the airports or the Sheikh Hussein/North Border crossing at the Jordan/Israel border. Check with the Jordanian authorities if you\'re planning to cross the Wadi Araba/south border crossing (Aqaba/Eilat) or the Allenby/King Hussein Bridge. An exit tax, currently 10JD, is payable at all border crossings, except the airports. If you wish to combine travel to Jordan with a visit to Israel and the Occupied Palestinian Territories, it\'s usually better to get a multiple entry visa before you travel from the Embassy of the Hashemite Kingdom of Jordan in London. You can extend your visa after you arrive in Jordan up to a maximum period of 6 months. If you overstay your visa you will be fined. If you\'re entering for tourism you can get a combination of a visa and reduced cost entry to the major tourism sites by applying for a Jordan Pass online. You must undergo an HIV test if you intend to stay in Jordan for more than 30 days, either as a resident or as a long-term visitor. The fee to obtain the health certificate is currently 20 Jordanian Dinars.</div>');
+          } else if (code == 'mz') {
+            label.html('<div class="map-atooltip">Mozambique: British nationals need a visa to enter Mozambique. If you\'re a tourist or travelling for work purposes from a country where there is a Mozambican diplomatic mission, you must get the appropriate visa before travelling. You must present on entry a return air ticket (for air travellers) and either an invitation from family / friends or a confirmed hotel reservation.</div>');
           } else {
             label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
           }
@@ -1450,6 +1453,8 @@
             window.location = 'https://www.gov.uk/foreign-travel-advice/tanzania/entry-requirements';
           } else if (code == 'jo') {
             window.location = 'https://www.gov.uk/foreign-travel-advice/jordan/entry-requirements';
+          } else if (code == 'mz') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/mozambique/entry-requirements';
           }
         }
       });
