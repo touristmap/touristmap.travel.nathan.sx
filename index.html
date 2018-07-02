@@ -341,6 +341,7 @@
         "TF": visa,
         "TG": visa_on_arrival,
         "TH": no_visa_less_than_one_month,
+        "TJ": visa,
         "TL": visa_on_arrival,
         "TM": visa,
         "TN": no_visa,
@@ -1119,6 +1120,8 @@
             label.html('<div class="map-atooltip">Zambia: British passport holders need a visa to enter Zambia. You can get a visa from the Zambian High Commission in London before you travel. Single and double entry visit visas are available on arrival at all ports of entry, but multi-entry visas are not. If you plan to get a visa on arrival, make sure you have the correct amount of cash (US dollars) with you as change may not be available. If you enter through Kenneth Kaunda International Airport you can now make payment for single and double entry visas via credit or debit card at the Zambian Immigration desks. On leaving Zambia, all air passengers must pay a departure tax of US$25. Although this is normally included in the cost of an air ticket you will be asked to pay separately in Zambian Kwacha if it is not. With effect from 1 January 2011 the National Airports Corporation has added a Security Charge to all departing passengers payable at all NACL airports. The cost is US $3 per person per sector for domestic flights and US $5 per person for international flights. Fees must be paid in Kwacha but is also included in the ticket price.</div>');
           } else if (code == 'tm') {
             label.html('<div class="map-atooltip">Turkmenistan: The following information is subject to change. You should consult the Turkmen Embassy in London well in advance of your intended travel date. All visa applications made at Turkmen Embassies in the UK and overseas are referred to Ashgabat for a decision. This can take 20 days or more. British nationals need a visa to enter Turkmenistan. You will need a letter of invitation, certified by the State Migration Service of Turkmenistan, from a private individual or company to support your application. For tourists, these can be obtained from authorised travel agents. A list is available from the British Embassy in Ashgabat. Without prior approval from the Turkmen authorities, it is not possible to enter Turkmenistan. It is possible to buy a visa on arrival at either Ashgabat airport or the ferry port at Turkmenbashi but only if you have approval from the Turkmenistan Migration Service before arrival. If you break your journey or try to enter Turkmenistan without the right visa you will face a long and uncomfortable wait in the offices of the Immigration Service at the airport or ferry port. If you are staying for more than 3 days you should register with the State Service of Turkmenistan for the Registration of Foreign Nationals. On arrival, you must pay a US$14 migration fee ($10 fee plus $4 Admin charge).</div>');
+          } else if (code == 'tj') {
+            label.html('<div class="map-atooltip">Tajikistan: British nationals require a visa before travel. The Embassy of the Republic of Tajikistan in London offers an online e-visa service. Tourist visas are valid for a period of up to 45 days. The Embassy of the Republic of Tajikistan in London also processes applications for travel permits to the Gorno-Badakhshan Autonomous Region of Tajikistan. Entry into the region, both from inside and from outside Tajikistan, requires a special permit in advance in addition to a valid Tajik visa. You can also get a permit from the Ministry of Foreign Affairs or Office of Visas and Registrations once in Tajikistan. Once you arrive in Tajikistan you can apply for visa extensions at the Consular Department of the Tajik Ministry of Foreign Affairs.</div>');
           } else {
             label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
           }
@@ -1465,7 +1468,10 @@
             window.location = 'https://www.gov.uk/foreign-travel-advice/zambia/entry-requirements';
           } else if (code == 'tm') {
             window.location = 'https://www.gov.uk/foreign-travel-advice/turkmenistan/entry-requirements';
-          }        }
+          } else if (code == 'tj') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/tajikistan/entry-requirements';
+          }
+        }
       });
     });
   </script>
