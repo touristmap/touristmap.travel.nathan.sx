@@ -345,6 +345,7 @@
         "TL": visa_on_arrival,
         "TM": visa,
         "TN": no_visa,
+        "TR": visa_on_arrival,
         "TT": no_visa,
         "TW": no_visa,
         "TZ": visa_on_arrival,
@@ -1122,6 +1123,8 @@
             label.html('<div class="map-atooltip">Turkmenistan: The following information is subject to change. You should consult the Turkmen Embassy in London well in advance of your intended travel date. All visa applications made at Turkmen Embassies in the UK and overseas are referred to Ashgabat for a decision. This can take 20 days or more. British nationals need a visa to enter Turkmenistan. You will need a letter of invitation, certified by the State Migration Service of Turkmenistan, from a private individual or company to support your application. For tourists, these can be obtained from authorised travel agents. A list is available from the British Embassy in Ashgabat. Without prior approval from the Turkmen authorities, it is not possible to enter Turkmenistan. It is possible to buy a visa on arrival at either Ashgabat airport or the ferry port at Turkmenbashi but only if you have approval from the Turkmenistan Migration Service before arrival. If you break your journey or try to enter Turkmenistan without the right visa you will face a long and uncomfortable wait in the offices of the Immigration Service at the airport or ferry port. If you are staying for more than 3 days you should register with the State Service of Turkmenistan for the Registration of Foreign Nationals. On arrival, you must pay a US$14 migration fee ($10 fee plus $4 Admin charge).</div>');
           } else if (code == 'tj') {
             label.html('<div class="map-atooltip">Tajikistan: British nationals require a visa before travel. The Embassy of the Republic of Tajikistan in London offers an online e-visa service. Tourist visas are valid for a period of up to 45 days. The Embassy of the Republic of Tajikistan in London also processes applications for travel permits to the Gorno-Badakhshan Autonomous Region of Tajikistan. Entry into the region, both from inside and from outside Tajikistan, requires a special permit in advance in addition to a valid Tajik visa. You can also get a permit from the Ministry of Foreign Affairs or Office of Visas and Registrations once in Tajikistan. Once you arrive in Tajikistan you can apply for visa extensions at the Consular Department of the Tajik Ministry of Foreign Affairs.</div>');
+          } else if (code == 'tr') {
+            label.html('<div class="map-atooltip">Turkey: British nationals need a visa to enter Turkey, except for cruise ship passengers with ‘British Citizen’ passports who arrive at sea ports for tourist visits to the port city or nearby cities, provided that the visit doesn’t exceed 72 hours. You can get an e-Visa online before you travel through the official Republic of Turkey e-Visa website. An e-visa costs $20 and you can pay using a credit or debit card. In case of problems with the computer systems at the Turkish port of entry, print off and carry a paper copy of your e-Visa, or make sure you have an electronic copy on a smart phone or other device to show to the immigration officer. Until further notice British citizens can get a multiple entry visitor visa, valid for 90 days, on arrival at any port of entry on payment of £20 in cash (Scottish and Northern Irish currency is not accepted). However, the visa on arrival service is likely to be phased out at some point in the near future. To avoid possible problems or delays at the Turkish border, or when boarding your flight in the UK, get an e-Visa from the official website before you travel. At Istanbul Ataturk airport (and possibly at other airports) there will be self service e-Visa kiosks and Wi-Fi areas where visitors can apply for an e-Visa on arrival using their own smart devices.</div>');
           } else {
             label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
           }
@@ -1470,6 +1473,8 @@
             window.location = 'https://www.gov.uk/foreign-travel-advice/turkmenistan/entry-requirements';
           } else if (code == 'tj') {
             window.location = 'https://www.gov.uk/foreign-travel-advice/tajikistan/entry-requirements';
+          } else if (code == 'tr') {
+            window.location = 'https://www.gov.uk/foreign-travel-advice/turkey/entry-requirements';
           }
         }
       });
