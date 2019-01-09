@@ -353,7 +353,7 @@
         "UG": visa,
         "US": visa,
         "UY": no_visa,
-        "UZ": visa,
+        "UZ": no_visa_less_than_one_month,
         "VE": no_visa,
         "VN": no_visa_less_than_one_month,
         "VU": no_visa_less_than_one_month,
@@ -868,7 +868,7 @@
           } else if (code == 'kg') {
             label.html('<div class="map-tooltip">Kyrgyzstan: Allowed to stay 60 days without a visa.</div>');
           } else if (code == 'uz') {
-            label.html('<div class="map-tooltip">Uzbekistan: Need a visa.</div>');
+            label.html('<div class="map-tooltip">Uzbekistan: From February 1st 2019 you\'re allowed to stay 30 days without a visa.</div>');
           } else if (code == 'ge') {
             label.html('<div class="map-tooltip">Georgia: Allowed to stay 1 year without a visa.</div>');
           } else if (code == 'am') {
@@ -992,7 +992,7 @@
           } else if (code == 'sd') {
             label.html('<div class="map-atooltip">Sudan: Need a visa.<br><br>You should register with the Aliens Department at the Ministry of Interior within 3 days of your arrival in the country. You will need two passport size photos. The fee is the Sudanese Pound equivalent of around £35. If you don\'t register within 3 days of arrival, you may be fined. Some of the larger hotels will do this for you but you should ask when you check-in.<br><br>You\'ll need to get an exit visa at the Aliens Department to leave the country.</div>');
           } else if (code == 'kz') {
-            label.html('<div class="map-atooltip">Kazakhstan: Until 31 December 2018 you can travel to Kazakhstan without a visa, provided your stay does not exceed 30 days (the day you arrive counts as day 1, regardless of arrival time). If you wish to stay longer than 30 days, you\'ll need a visa.</div>');
+            label.html('<div class="map-atooltip">Kazakhstan: You can travel to Kazakhstan without a visa, provided your stay does not exceed 30 days (the day you arrive counts as day 1, regardless of arrival time). If you wish to stay longer than 30 days, you\'ll need a visa.</div>');
           } else if (code == 'br') {
             label.html('<div class="map-atooltip">Brazil: Allowed to stay 90 days without a visa, extendable, at the discretion of the Federal Police, for a further 90 days. A return ticket and proof of sufficient funds may be requested on arrival.</div>');
           } else if (code == 'fr') {
