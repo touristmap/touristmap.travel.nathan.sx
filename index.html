@@ -251,7 +251,7 @@
         "GQ": visa,
         "GR": no_visa,
         "GT": no_visa,
-        "GW": visa,
+        "GW": visa_on_arrival,
         "GY": no_visa_less_than_one_month,
         "HN": no_visa_less_than_one_month,
         "HR": no_visa,
@@ -307,7 +307,7 @@
         "NO": no_visa,
         "NP": visa_on_arrival,
         "NZ": no_visa,
-        "OM": visa_on_arrival,
+        "OM": visa,
         "PA": no_visa,
         "PE": no_visa,
         "PG": visa_on_arrival,
@@ -323,7 +323,7 @@
         "RS": no_visa,
         "RU": visa,
         "RW": visa_on_arrival,
-        "SA": visa,
+        "SA": visa_on_arrival,
         "SB": no_visa,
         "SD": visa,
         "SE": no_visa,
@@ -966,7 +966,7 @@
           } else if (code == 'kh') {
             label.html('<div class="map-tooltip">Cambodia: Visa on arrival and eVisa possible.</div>');
           } else if (code == 'la') {
-            label.html('<div class="map-tooltip">Laos: Visa on arrival.</div>');
+            label.html('<div class="map-tooltip">Laos: Visa on arrival and eVisa possible.</div>');
           } else if (code == 'mm') {
             label.html('<div class="map-tooltip">Myanmar/Burma: Need a visa. It is possible to obtain an eVisa.</div>');
           } else if (code == 'tw') {
@@ -1006,17 +1006,17 @@
           } else if (code == 'ie') {
             label.html('<div class="map-tooltip">Ireland: As Ireland is a part of the Common Travel Area, you do not need a passport to visit Ireland. However, you may be asked to prove your nationality under certain circumstances.</div>');
           } else if (code == 'pk') {
-            label.html('<div class="map-tooltip">Pakistan: Need a visa.</div>');
+            label.html('<div class="map-tooltip">Pakistan: Need a visa. It is possible to obtain an eVisa.</div>');
           } else if (code == 'af') {
             label.html('<div class="map-tooltip">Afghanistan: Need a visa.</div>');
           } else if (code == 'ir') {
             label.html('<div class="map-tooltip">Iran: Need a visa.</div>');
           } else if (code == 'om') {
-            label.html('<div class="map-tooltip">Oman: Visa on arrival valid for 30 days and extendable for 30 days. It is possible to obtain an eVisa.</div>');
+            label.html('<div class="map-tooltip">Oman: Need a visa. Oman stopped issuing visas on arrival in February 2019. In November 2019 Oman authorities announced that all visitors should obtain an eVisa in advance and that visas on arrival would be granted only as an exception.</div>');
           } else if (code == 'ye') {
             label.html('<div class="map-tooltip">Yemen: Need a visa. If you\'re staying for more than 14 days you\'ll need to register your passport after arrival in country with the Yemen immigration authorities. Special permission is needed for travel outside Sana\'a or Aden.</div>');
           } else if (code == 'sa') {
-            label.html('<div class="map-tooltip">Saudi Arabia: Need a visa. If you\'re a British Muslim you may face entry restrictions at certain times during the year.</div>');
+            label.html('<div class="map-tooltip">Saudi Arabia: Since September 2019 Saudi Arabia has started to issue visas on arrival. It is possible to obtain an eVisa. If you\'re a British Muslim you may face entry restrictions at certain times during the year.</div>');
           } else if (code == 'qa') {
             label.html('<div class="map-tooltip">Qatar: 30 day visa waiver. If you hold another type of British passport you need a visa.</div>');
           } else if (code == 'iq') {
@@ -1086,9 +1086,9 @@
           } else if (code == 'bi') {
             label.html('<div class="map-atooltip">Burundi: Need a visa.</div>');
           } else if (code == 'gn') {
-            label.html('<div class="map-atooltip">Guinea: Need a visa.</div>');
+            label.html('<div class="map-atooltip">Guinea: Need a visa. It is possible to obtain an eVisa.</div>');
           } else if (code == 'gw') {
-            label.html('<div class="map-atooltip">Guinea-Bissau: Need a visa. It is possible to obtain an eVisa.</div>');
+            label.html('<div class="map-atooltip">Guinea-Bissau: Visa on arrival valid for 90 days. It is possible to obtain an eVisa.</div>');
           } else if (code == 'sl') {
             label.html('<div class="map-atooltip">Sierra Leone: Visitors from the UK can get a visa on arrival in Sierra Leone for US$80, which must be paid in cash in US dollars.</div>');
           } else if (code == 'cy') {
@@ -1204,7 +1204,7 @@
           } else if (code == 'lt') {
             label.html('<div class="map-atooltip">Lithuania: Allowed to stay 90 days without a visa.</div>');
           } else if (code == 'mg') {
-            label.html('<div class="map-atooltip">Madagascar: Non-extendable 30 day tourist visa available for purchase at the airport on arrival.</div>');
+            label.html('<div class="map-atooltip">Madagascar: Non-extendable 30 day tourist visa available for purchase at the airport on arrival. It is possible to obtain an eVisa.</div>');
           } else if (code == 'ca') {
             label.html('<div class="map-atooltip">Canada: You\'ll need to get an Electronic Travel Authorization (eTA) if you\'re entering Canada by air. If you\'re travelling by land or sea, you won\'t need an eTA when you enter Canada. However, you must travel with acceptable travel documents and identification.</div>');
           } else if (code == 'dj') {
