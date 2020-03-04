@@ -181,6 +181,8 @@
 
   <script>
     $(function() {
+      var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
       var no_visa = "#2ecc71";
       var no_visa_less_than_one_month = "#3498db";
       var visa = "#e74c3c";
@@ -1406,6 +1408,10 @@
           }
         },
         onRegionClick: function(e, code) {
+          if (isMobile) {
+            return
+          }
+
           code = code.toLowerCase();
           if (code == 'th') {
             window.location = 'https://www.gov.uk/foreign-travel-advice/thailand/entry-requirements';
