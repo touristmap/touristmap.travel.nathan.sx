@@ -11,7 +11,8 @@
   <meta name="twitter:site" content="@NathOnTravels">
   <meta name="twitter:creator" content="@NathOnTravels">
   <meta name="twitter:title" content="British Citizen Tourist Map">
-  <meta name="twitter:description" content="A map of entry requirements for British citizens who want to travel the world.">
+  <meta name="twitter:description"
+    content="A map of entry requirements for British citizens who want to travel the world.">
   <meta name="twitter:image" content="https://touristmap.travel.nathan.sx/assets/images/twitter/card.png">
 
   <link rel="apple-touch-icon" href="/assets/images/favicons/apple-touch-icon.png" sizes="180x180">
@@ -25,11 +26,13 @@
 
   <link rel="stylesheet" href="/assets/css/responsive.css">
   <link rel="stylesheet" href="/assets/css/jquery-jvectormap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css" integrity="sha256-NBgeI1K43CnPptaOS0A2PfGfTg+8gtmTyDEe7GmiP64=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css"
+    integrity="sha256-NBgeI1K43CnPptaOS0A2PfGfTg+8gtmTyDEe7GmiP64=" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/1.3.3/css/ionicons.min.css">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
   <script src="/assets/js/jquery-jvectormap-2.0.5.min.js"></script>
   <script src="/assets/js/jquery-jvectormap-world-mill.js"></script>
 
@@ -38,42 +41,42 @@
       margin: 0;
       padding: 0;
     }
-    
+
     body {
       background-color: #0f2744;
       font-size: 16px;
     }
-    
+
     a {
       text-decoration: none;
       color: #fff;
     }
-    
+
     #header {
       padding: 10px;
       color: #fff;
       font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background-color: #0a1b2f;
     }
-    
+
     #header-right {
       float: right;
     }
-    
+
     @media screen and (max-width: 991px) {
       #header {
         text-align: center !important;
       }
     }
-    
+
     #title {
       font-weight: bold;
     }
-    
+
     #subtitle {
       font-size: 14px;
     }
-    
+
     @media screen and (min-width: 992px) {
       #vmap {
         left: 0;
@@ -83,24 +86,26 @@
         height: 500px !important;
       }
     }
-    
+
     @media screen and (max-width: 767px) {
+
       .jvectormap-zoomin,
       .jvectormap-zoomout {
         visibility: hidden;
         display: none;
       }
     }
-    
+
     @media screen and (max-width: 767px) and (orientation:landscape) {
       #header {
         display: none !important;
       }
+
       #footer {
         display: none !important;
       }
     }
-    
+
     #footer {
       padding: 10px;
       color: #fff;
@@ -110,12 +115,12 @@
       width: 100%;
       background-color: #0a1b2f;
     }
-    
+
     #credit {
       float: right;
       margin-right: 20px;
     }
-    
+
     @media screen and (max-width: 1200px) {
       #credit {
         float: none;
@@ -124,33 +129,33 @@
         padding-top: 5px;
       }
     }
-    
+
     .square {
       float: left;
       width: 20px;
       height: 20px;
     }
-    
+
     .square-wrapper {
       float: left;
     }
-    
+
     .square-visa {
       background-color: #e74c3c;
     }
-    
+
     .square-no-visa {
       background-color: #2ecc71;
     }
-    
+
     .square-no-visa-less-than-one-month {
       background-color: #3498db;
     }
-    
+
     .square-visa-on-arrival {
       background-color: #9b59b6;
     }
-    
+
     #vmap {
       width: 100%;
       height: 300px;
@@ -160,7 +165,7 @@
       max-height: 100%;
       overflow: auto;
     }
-    
+
     #noscript {
       text-align: center;
       color: #fff;
@@ -180,7 +185,7 @@
   </style>
 
   <script>
-    $(function() {
+    $(function () {
       var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
       var no_visa = "#2ecc71";
@@ -400,7 +405,7 @@
         }
       }, {
         latLng: [47.14, 9.52],
-        name: 'Liechtenstein: Allowed to stay 90 days without a visa.',
+        name: 'Liechtenstein: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.',
         style: {
           fill: no_visa
         }
@@ -424,7 +429,7 @@
         }
       }, {
         latLng: [35.88, 14.5],
-        name: 'Malta: No visa requirement for British nationals.',
+        name: 'Malta: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.',
         style: {
           fill: no_visa
         }
@@ -760,7 +765,7 @@
         }
       }, {
         latLng: [37.7, -25.6],
-        name: 'The Azores: The Azores is an autonomous region of Portugal. Allowed to stay 90 days without a visa.',
+        name: 'The Azores: The Azores is an autonomous region of Portugal. Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.',
         style: {
           fill: no_visa
         }
@@ -796,7 +801,7 @@
         }
       }, {
         latLng: [28.0, -15.3],
-        name: 'Canary Islands: The Canary Islands are an autonomous region of Spain. Allowed to stay 90 days without a visa.',
+        name: 'Canary Islands: The Canary Islands are an autonomous region of Spain. Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.',
         style: {
           fill: no_visa
         }
@@ -808,7 +813,7 @@
         }
       }, {
         latLng: [32.3, -16.2],
-        name: 'Madeira: Madeira is an autonomous region of Portugal. Allowed to stay 90 days without a visa.',
+        name: 'Madeira: Madeira is an autonomous region of Portugal. Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.',
         style: {
           fill: no_visa
         }
@@ -868,7 +873,7 @@
         }
       }, {
         latLng: [60.1, 20.3],
-        name: 'Åland Islands: Åland is an autonomous, Swedish speaking group of islands which form a part of Finland. No visa required.',
+        name: 'Åland Islands: Åland is an autonomous, Swedish speaking group of islands which form a part of Finland. Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.',
         style: {
           fill: no_visa
         }
@@ -1030,13 +1035,13 @@
         }
       }, {
         latLng: [35.8, -5.3],
-        name: 'Ceuta: Ceuta is a Spanish enclave city. As it is a part of Spain no visa is required.',
+        name: 'Ceuta: Ceuta is a Spanish enclave city. Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.',
         style: {
           fill: no_visa
         }
       }, {
         latLng: [35.2, -2.9],
-        name: 'Melilla: Melilla is a Spanish enclave city. As it is a part of Spain no visa is required.',
+        name: 'Melilla: Melilla is a Spanish enclave city. Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.',
         style: {
           fill: no_visa
         }
@@ -1087,7 +1092,7 @@
           }
         },
         markers: markers,
-        onRegionTipShow: function(e, label, code) {
+        onRegionTipShow: function (e, label, code) {
           code = code.toLowerCase();
           if (code == 'th') {
             label.html('<div class="map-tooltip">Thailand: British passport holders arriving by air or land can enter Thailand for 30 days without a visa - this is known as a visa exemption. If you need to stay longer, it\'s possible to extend your stay once, from the expiry date of the original visa, for up to 30 days.</div>');
@@ -1166,13 +1171,13 @@
           } else if (code == 'am') {
             label.html('<div class="map-tooltip">Armenia: Allowed to stay 180 days without a visa.</div>');
           } else if (code == 'is') {
-            label.html('<div class="map-tooltip">Iceland: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-tooltip">Iceland: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'vu') {
             label.html('<div class="map-tooltip">Vanuatu: Allowed to stay 30 days without a visa providing you have an onward or return ticket.</div>');
           } else if (code == 'no') {
-            label.html('<div class="map-tooltip">Norway: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-tooltip">Norway: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'ch') {
-            label.html('<div class="map-tooltip">Switzerland: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-tooltip">Switzerland: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'ua') {
             label.html('<div class="map-tooltip">Ukraine: Allowed to stay 90 days without a visa.</div>');
           } else if (code == 'za') {
@@ -1228,7 +1233,7 @@
           } else if (code == 'sl') {
             label.html('<div class="map-atooltip">Sierra Leone: Visitors from the UK can get a visa on arrival in Sierra Leone for US$80, which must be paid in cash in US dollars.</div>');
           } else if (code == 'cy') {
-            label.html('<div class="map-atooltip">Cyprus: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Cyprus: Allowed to stay 90 days without a visa. Visits to other EU countries will not count towards the 90-day total.</div>');
           } else if (code == 'xc') {
             label.html('<div class="map-atooltip">North Cyprus: Allowed to stay 90 days without a visa.</div>');
           } else if (code == 'ba') {
@@ -1288,57 +1293,57 @@
           } else if (code == 'br') {
             label.html('<div class="map-atooltip">Brazil: Allowed to stay 90 days without a visa, extendable, at the discretion of the Federal Police, for a further 90 days. A return ticket and proof of sufficient funds may be requested on arrival.</div>');
           } else if (code == 'fr') {
-            label.html('<div class="map-atooltip">France: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">France: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'de') {
-            label.html('<div class="map-atooltip">Germany: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Germany: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'nl') {
-            label.html('<div class="map-atooltip">Netherlands: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Netherlands: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'es') {
-            label.html('<div class="map-atooltip">Spain: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Spain: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'pt') {
-            label.html('<div class="map-atooltip">Portugal: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Portugal: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'be') {
-            label.html('<div class="map-atooltip">Belgium: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Belgium: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'lu') {
-            label.html('<div class="map-atooltip">Luxembourg: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Luxembourg: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'it') {
-            label.html('<div class="map-atooltip">Italy: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Italy: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'pl') {
-            label.html('<div class="map-atooltip">Poland: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Poland: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'cz') {
-            label.html('<div class="map-atooltip">Czech Republic: Allowed to stay 90 days without a visa. If you intend to stay longer than 30 days you need to register with Czech Foreign Police.</div>');
+            label.html('<div class="map-atooltip">Czechia: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa. If you intend to stay longer than 30 days you need to register with Czech Foreign Police.</div>');
           } else if (code == 'sk') {
-            label.html('<div class="map-atooltip">Slovakia: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Slovakia: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'at') {
-            label.html('<div class="map-atooltip">Austria: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Austria: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'si') {
-            label.html('<div class="map-atooltip">Slovenia: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Slovenia: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'hr') {
-            label.html('<div class="map-atooltip">Croatia: Allowed to stay 90 days without a visa. You may be asked to produce evidence of the financial means necessary to cover your stay and return or onward trip.</div>');
+            label.html('<div class="map-atooltip">Croatia: Allowed to stay 90 days without a visa. Visits to other EU countries will not count towards the 90-day total. You may be asked to produce evidence of the financial means necessary to cover your stay and return or onward trip.</div>');
           } else if (code == 'hu') {
-            label.html('<div class="map-atooltip">Hungary: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Hungary: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'dk') {
-            label.html('<div class="map-atooltip">Denmark: Allowed to stay 90 days without a visa.<br><br>On 4 January 2016, the Danish authorities increased border controls at the land border with Germany. If you\'re travelling to Denmark from Germany using the land border, you should make sure you have your passport with you.<br><br>The Swedish authorities have announced additional immigration controls when entering Sweden, including when travelling from Denmark to Sweden. This may cause delays to your journey and you should make sure you carry a passport or other valid identity document with you if you plan to travel from Denmark to Sweden.</div>');
+            label.html('<div class="map-atooltip">Denmark: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.<br><br>On 4 January 2016, the Danish authorities increased border controls at the land border with Germany. If you\'re travelling to Denmark from Germany using the land border, you should make sure you have your passport with you.<br><br>The Swedish authorities have announced additional immigration controls when entering Sweden, including when travelling from Denmark to Sweden. This may cause delays to your journey and you should make sure you carry a passport or other valid identity document with you if you plan to travel from Denmark to Sweden.</div>');
           } else if (code == 'gl') {
             label.html('<div class="map-atooltip">Greenland: No visa needed for tourism, but you should get a work and residence permit before entry if you intend to live and work there.</div>');
           } else if (code == 'fi') {
-            label.html('<div class="map-atooltip">Finland: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Finland: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'se') {
-            label.html('<div class="map-atooltip">Sweden: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Sweden: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'me') {
             label.html('<div class="map-atooltip">Montenegro: Allowed to stay 90 days without a visa.</div>');
           } else if (code == 'ro') {
-            label.html('<div class="map-atooltip">Romania: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Romania: Allowed to stay 90 days without a visa. Visits to other EU countries will not count towards the 90-day total.</div>');
           } else if (code == 'bg') {
-            label.html('<div class="map-atooltip">Bulgaria: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Bulgaria: Allowed to stay 90 days without a visa. Visits to other EU countries will not count towards the 90-day total.</div>');
           } else if (code == 'gr') {
-            label.html('<div class="map-atooltip">Greece: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Greece: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'ee') {
-            label.html('<div class="map-atooltip">Estonia: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Estonia: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'lv') {
-            label.html('<div class="map-atooltip">Latvia: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Latvia: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'lt') {
-            label.html('<div class="map-atooltip">Lithuania: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-atooltip">Lithuania: Allowed to stay for up to 90 days in any 180-day period (entire Schengen area) without a visa.</div>');
           } else if (code == 'mg') {
             label.html('<div class="map-atooltip">Madagascar: Non-extendable 30 day tourist visa available for purchase at the airport on arrival. It is possible to obtain an eVisa.</div>');
           } else if (code == 'ca') {
@@ -1445,7 +1450,7 @@
             label.html('<div class="map-tooltip">' + label.html() + ': We don\'t have any information about this country yet!</div>');
           }
         },
-        onRegionClick: function(e, code) {
+        onRegionClick: function (e, code) {
           if (isMobile) {
             return
           }
@@ -1801,41 +1806,49 @@
     });
   </script>
 
-  <body>
-    <div id="header">
-      <a href="/" id="title">British Citizen Tourist Map</a> <span id="subtitle" class="hidden-xs">Entry requirements for <abbr title="People with a full 'British Citizen' passport.">British citizens</abbr> who want to travel the world.</span> <span id="header-right" class="hidden-xs"><span id="count">0</span> Locations</span>
+<body>
+  <div id="header">
+    <a href="/" id="title">British Citizen Tourist Map</a> <span id="subtitle" class="hidden-xs">Entry requirements for
+      <abbr title="People with a full 'British Citizen' passport.">British citizens</abbr> who want to travel the
+      world.</span> <span id="header-right" class="hidden-xs"><span id="count">0</span> Locations</span>
+  </div>
+  <noscript>
+    <div id="noscript">
+      <strong>Hey!</strong> To display the map you need to have Javascript enabled. Cheers!
     </div>
-    <noscript>
-      <div id="noscript">
-        <strong>Hey!</strong> To display the map you need to have Javascript enabled. Cheers!
-      </div>
-    </noscript>
-    <div id="vmap"></div>
-    <div id="footer">
-      <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="You must obtain a visa or other prior authorization before traveling. You cannot get a visa on arrival.">
-        <div class="square square-visa"></div>&nbsp;=&nbsp;Visa Required Before Arrival&nbsp;
-      </div>
-      <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="No visa is required to enter. The length you will be allowed to stay may vary.">
-        <div class="square square-no-visa"></div>&nbsp;=&nbsp;Visa Not Required&nbsp;
-      </div>
-      <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="No visa is required to enter and you will be allowed to stay initally for no longer than 30 days. You may be able to extend your stay without obtaining a visa.">
-        <div class="square square-no-visa-less-than-one-month"></div>&nbsp;=&nbsp;Visa Not Required (1 Month or Less)&nbsp;
-      </div>
-      <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up" data-balloon="You can obtain a visa on arrival. This may be specific to certain ports or crossings. The length you will be allowed to stay may vary.">
-        <div class="square square-visa-on-arrival"></div>&nbsp;=&nbsp;Visa On Arrival&nbsp;
-      </div>
-      <div id="credit">
-        <a href="https://nathan.sx" target="_blank">Made with <i class="icon ion-heart" style="color: #e25555;"></i> by Nathan</a>
-      </div>
+  </noscript>
+  <div id="vmap"></div>
+  <div id="footer">
+    <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up"
+      data-balloon="You must obtain a visa or other prior authorization before traveling. You cannot get a visa on arrival.">
+      <div class="square square-visa"></div>&nbsp;=&nbsp;Visa Required Before Arrival&nbsp;
     </div>
+    <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up"
+      data-balloon="No visa is required to enter. The length you will be allowed to stay may vary.">
+      <div class="square square-no-visa"></div>&nbsp;=&nbsp;Visa Not Required&nbsp;
+    </div>
+    <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up"
+      data-balloon="No visa is required to enter and you will be allowed to stay initally for no longer than 30 days. You may be able to extend your stay without obtaining a visa.">
+      <div class="square square-no-visa-less-than-one-month"></div>&nbsp;=&nbsp;Visa Not Required (1 Month or
+      Less)&nbsp;
+    </div>
+    <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up"
+      data-balloon="You can obtain a visa on arrival. This may be specific to certain ports or crossings. The length you will be allowed to stay may vary.">
+      <div class="square square-visa-on-arrival"></div>&nbsp;=&nbsp;Visa On Arrival&nbsp;
+    </div>
+    <div id="credit">
+      <a href="https://nathan.sx" target="_blank">Made with <i class="icon ion-heart" style="color: #e25555;"></i> by
+        Nathan</a>
+    </div>
+  </div>
 
-    <script>
-    if('serviceWorker' in navigator) {
+  <script>
+    if ('serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/assets/js/sw.js')
-        .then(function() { console.log("Service Worker Registered"); });
+        .then(function () { console.log("Service Worker Registered"); });
     }
-    </script>
-  </body>
+  </script>
+</body>
 
 </html>
