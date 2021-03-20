@@ -144,6 +144,10 @@
       background-color: #e74c3c;
     }
 
+    .square-evisa {
+      background-color: #e7773c;
+    }
+
     .square-no-visa {
       background-color: #2ecc71;
     }
@@ -191,6 +195,7 @@
       var no_visa = "#2ecc71";
       var no_visa_less_than_one_month = "#3498db";
       var visa = "#e74c3c";
+      var evisa = "#e7773c";
       var visa_on_arrival = "#9b59b6";
 
       var data = {
@@ -198,18 +203,18 @@
         "AF": visa,
         "AL": no_visa,
         "AM": no_visa,
-        "AO": visa,
+        "AO": evisa,
         "AR": no_visa,
         "AT": no_visa,
-        "AU": visa,
-        "AZ": visa,
+        "AU": evisa,
+        "AZ": evisa,
         "BA": no_visa,
         "BD": visa_on_arrival,
         "BE": no_visa,
         "BF": visa_on_arrival,
         "BG": no_visa,
         "BI": visa,
-        "BJ": visa,
+        "BJ": evisa,
         "BN": no_visa,
         "BO": no_visa_less_than_one_month,
         "BR": no_visa,
@@ -218,12 +223,12 @@
         "BW": no_visa,
         "BY": no_visa_less_than_one_month,
         "BZ": no_visa_less_than_one_month,
-        "CA": visa,
+        "CA": evisa,
         "CD": visa,
         "CF": visa,
         "CG": visa,
         "CH": no_visa,
-        "CI": visa,
+        "CI": evisa,
         "CL": no_visa,
         "CM": visa,
         "CN": visa,
@@ -248,13 +253,13 @@
         "FJ": no_visa,
         "FK": no_visa,
         "FR": no_visa,
-        "GA": visa,
+        "GA": evisa,
         "GB": no_visa,
         "GE": no_visa,
         "GH": visa,
         "GL": no_visa,
         "GM": no_visa,
-        "GN": visa,
+        "GN": evisa,
         "GQ": visa,
         "GR": no_visa,
         "GT": no_visa,
@@ -267,7 +272,7 @@
         "ID": no_visa_less_than_one_month,
         "IE": no_visa,
         "IL": no_visa,
-        "IN": visa,
+        "IN": evisa,
         "IQ": visa_on_arrival,
         "IR": visa,
         "IS": no_visa,
@@ -278,7 +283,7 @@
         "KE": visa_on_arrival,
         "KG": no_visa,
         "KH": visa_on_arrival,
-        "KP": visa,
+        "KP": evisa,
         "KR": no_visa,
         "KW": visa_on_arrival,
         "KZ": no_visa_less_than_one_month,
@@ -297,7 +302,7 @@
         "MG": visa_on_arrival,
         "MK": no_visa,
         "ML": visa,
-        "MM": visa,
+        "MM": evisa,
         "MN": visa,
         "MR": visa_on_arrival,
         "MT": no_visa,
@@ -313,15 +318,15 @@
         "NL": no_visa,
         "NO": no_visa,
         "NP": visa_on_arrival,
-        "NZ": visa,
-        "OM": visa,
+        "NZ": evisa,
+        "OM": evisa,
         "PA": no_visa,
         "PE": no_visa,
         "PG": visa_on_arrival,
         "PH": no_visa_less_than_one_month,
-        "PK": visa,
+        "PK": evisa,
         "PL": no_visa,
-        "PR": visa,
+        "PR": evisa,
         "PS": no_visa,
         "PT": no_visa,
         "PY": no_visa,
@@ -339,8 +344,8 @@
         "SL": visa_on_arrival,
         "SN": no_visa,
         "SO": visa_on_arrival,
-        "SS": visa,
-        "SR": visa,
+        "SS": evisa,
+        "SR": evisa,
         "SV": no_visa,
         "SY": visa,
         "SZ": no_visa_less_than_one_month,
@@ -358,7 +363,7 @@
         "TZ": visa_on_arrival,
         "UA": no_visa,
         "UG": visa_on_arrival,
-        "US": visa,
+        "US": evisa,
         "UY": no_visa,
         "UZ": no_visa_less_than_one_month,
         "VE": visa_on_arrival,
@@ -525,7 +530,7 @@
         }
       }, {
         latLng: [0.33, 6.73],
-        name: 'São Tomé and Príncipe: Allowed to visit for up to 15 days without a visa.',
+        name: 'São Tomé and Príncipe: Allowed to visit for up to 15 days without a visa. It is possible to obtain an eVisa.',
         style: {
           fill: no_visa_less_than_one_month
         }
@@ -689,7 +694,7 @@
         latLng: [-7.9, -14.3],
         name: 'Ascension: You must get permission to visit Ascension Island from the Administrator before travel. You must be able to produce evidence of holding comprehensive travel and medical insurance. You must also be able to produce on request evidence of a return air ticket (or other evidence of pre-paid onward travel), pre-booked accommodation and sufficient funds to cover your stay on the island. It is possible to obtain an eVisa.',
         style: {
-          fill: visa
+          fill: evisa
         }
       }, {
         latLng: [-37.1, -12.2],
@@ -743,7 +748,7 @@
         latLng: [15.1, -23.6],
         name: 'Capo Verde: You can enter Capo Verde as a visitor for stays of up to 30 days without a visa, but you need to register with the Capo Verde authorities on the EASE website before travelling.',
         style: {
-          fill: visa
+          fill: evisa
         }
       }, {
         latLng: [-7.3, 72.4],
@@ -761,7 +766,7 @@
         latLng: [-0.6, -90.5],
         name: 'Galápagos Islands: The Galápagos Islands are a part of Ecuador. Online pre-registration is required. Transit Control Card must also be obtained at the airport prior to departure.',
         style: {
-          fill: visa
+          fill: evisa
         }
       }, {
         latLng: [37.7, -25.6],
@@ -773,19 +778,19 @@
         latLng: [-10.4, 105.6],
         name: 'Christmas Island: Christmas Island is an Australian external territory. Passports and visas are not required when travelling to Christmas Island from the Australian mainland. However, photographic identification, such as an Australian Driver\'s Licence or Proof of Age card, must be produced for each passenger (including children) for clearance through Customs and Immigration. A valid passport meets this identification requirement and is the preferred means of documentation to expedite passenger processing and provide passenger identification in the case of a flight diversion to another country. Normal Australian Customs and Immigration procedures apply when entry is made from outside Australia.',
         style: {
-          fill: visa
+          fill: evisa
         }
       }, {
         latLng: [-12.1, 96.8],
         name: 'Cocos (Keeling) Islands: Cocos (Keeling) Islands is an Australian external territory. Passports and visas are not required when travelling to Cocos (Keeling) Islands from the Australian mainland. However, photographic identification, such as an Australian Driver\'s Licence or Proof of Age card, must be produced for each passenger (including children) for clearance through Customs and Immigration. A valid passport meets this identification requirement and is the preferred means of documentation to expedite passenger processing and provide passenger identification in the case of a flight diversion to another country. Normal Australian Customs and Immigration procedures apply when entry is made from outside Australia.',
         style: {
-          fill: visa
+          fill: evisa
         }
       }, {
         latLng: [-29.0, 167.9],
         name: 'Norfolk Island: Norfolk Island is an Australian external territory. Passports and visas are not required when travelling to Norfolk Island from the Australian mainland. However, photographic identification, such as an Australian Driver\'s Licence or Proof of Age card, must be produced for each passenger (including children) for clearance through Customs and Immigration. A valid passport meets this identification requirement and is the preferred means of documentation to expedite passenger processing and provide passenger identification in the case of a flight diversion to another country. Normal Australian Customs and Immigration procedures apply when entry is made from outside Australia.',
         style: {
-          fill: visa
+          fill: evisa
         }
       }, {
         latLng: [10.2, 103.9],
@@ -905,7 +910,7 @@
         latLng: [18.3, -64.8],
         name: 'US Virgin Islands: ESTA required. Please see travel advice for USA.',
         style: {
-          fill: visa
+          fill: evisa
         }
       }, {
         latLng: [33.0, 88.0],
@@ -1061,7 +1066,7 @@
         latLng: [-19.0, 150.9],
         name: 'Coral Sea Islands: The Coral Sea Islands is an external territory of Australia. It likely has the same entry requirements as mainland Australia.',
         style: {
-          fill: visa
+          fill: evisa
         }
       }];
 
@@ -1119,7 +1124,7 @@
           } else if (code == 'mn') {
             label.html('<div class="map-tooltip">Mongolia: Need a visa.</div>');
           } else if (code == 'kp') {
-            label.html('<div class="map-tooltip">North Korea: Need a visa, but you\'ll likely need to be a part of a group tour.</div>');
+            label.html('<div class="map-tooltip">North Korea: Need a visa. It is only possible to enter North Korea as part of a group tour. An authorised tour company can handle your visa and there is no need to travel to any embassy.</div>');
           } else if (code == 'kr') {
             label.html('<div class="map-tooltip">South Korea: Allowed to stay 90 days without a visa.<br><br>NOTE: You cannot cross into North Korea by land without being shot.</div>');
           } else if (code == 'ph') {
@@ -1820,8 +1825,12 @@
   <div id="vmap"></div>
   <div id="footer">
     <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up"
-      data-balloon="You must obtain a visa or other prior authorization before traveling. You cannot get a visa on arrival.">
-      <div class="square square-visa"></div>&nbsp;=&nbsp;Visa Required Before Arrival&nbsp;
+      data-balloon="You must obtain a visa before traveling. You cannot get a visa on arrival or an eVisa.">
+      <div class="square square-visa"></div>&nbsp;=&nbsp;Visa Required&nbsp;
+    </div>
+    <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up"
+      data-balloon="You must obtain an eVisa or other prior electronic authorization before traveling. You cannot get a visa on arrival.">
+      <div class="square square-evisa"></div>&nbsp;=&nbsp;eVisa Required&nbsp;
     </div>
     <div class="square-wrapper" data-balloon-length="fit" data-balloon-pos="up"
       data-balloon="No visa is required to enter. The length you will be allowed to stay may vary.">
