@@ -77,6 +77,15 @@
       font-size: 14px;
     }
 
+    #notice {
+      font-size: 14px;
+      padding: 5px;
+      color: #fff;
+      font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: #ff851b;
+      text-align: center;
+    }
+
     @media screen and (min-width: 992px) {
       #vmap {
         left: 0;
@@ -108,6 +117,10 @@
 
     @media screen and (max-width: 767px) and (orientation:landscape) {
       #header {
+        display: none !important;
+      }
+
+      #notice {
         display: none !important;
       }
 
@@ -1128,7 +1141,7 @@
           } else if (code == 'tw') {
             label.html('<div class="map-tooltip">Taiwan: Allowed to stay 90 days without a visa, extendable by 90 days.</div>');
           } else if (code == 'jp') {
-            label.html('<div class="map-tooltip">Japan: Allowed to stay 90 days without a visa.</div>');
+            label.html('<div class="map-tooltip">Japan: Allowed to stay 90 days without a visa. This can then be extended for a further 90 days.</div>');
           } else if (code == 'ru') {
             label.html('<div class="map-tooltip">Russia: Need a visa.</div>');
           } else if (code == 'mn') {
@@ -1294,7 +1307,7 @@
           } else if (code == 'gq') {
             label.html('<div class="map-atooltip">Equatorial Guinea: Need a visa.</div>');
           } else if (code == 'co') {
-            label.html('<div class="map-atooltip">Colombia: Allowed to stay 90 days without a visa at the discretion of the Colombian Immigration Officer on arrival. You may need to provide evidence of return or onward travel.</div>');
+            label.html('<div class="map-atooltip">Colombia: Allowed to stay 90 days without a visa at the discretion of the Colombian Immigration Officer on arrival. Extendable up to 180-days stay consecutively within a one-year period. You may need to provide evidence of return or onward travel.</div>');
           } else if (code == 'ly') {
             label.html('<div class="map-atooltip">Libya: Need a visa. A Libyan visa issued overseas may not be recognised in some areas, due to the current political conflict.</div>');
           } else if (code == 'ss') {
@@ -1418,7 +1431,7 @@
           } else if (code == 'ae') {
             label.html('<div class="map-atooltip">United Arab Emirates: If you\'re a British Citizen you can get a (free) visitor\'s visa on arrival in the UAE. In the past, this visa has allowed the visitor to stay in the UAE for up to 30 days. The visa has terminated automatically on departure and a new visa issued on arrival each time the same visitor returns to the UAE.<br><br>That approach continues to be applied in most cases, but in some cases British citizens (and visitors of some other nationalities) who have left the UAE and returned again within the 30 day period of stay granted at the time of the first arrival, haven\'t received a new visa. Instead their stay has been limited to the initial 30 day period.</div>');
           } else if (code == 'lb') {
-            label.html('<div class="map-atooltip">Lebanon: British citizens can apply for a free single entry tourist or family visit visa on arrival. Entry requirements are subject to change, so you should check with the Lebanese Embassy before you travel.</div>');
+            label.html('<div class="map-atooltip">Lebanon: British citizens can apply for a free single entry tourist or family visit visa on arrival. Entry requirements are subject to change, so you should check with the Lebanese Embassy before you travel. Extendable for 2 additional months; granted free of charge at Beirut International Airport or any other port of entry if there is no Israeli visa or seal, holding a telephone number, an address in Lebanon, and a non refundable return or circle trip ticket.</div>');
           } else if (code == 'kw') {
             label.html('<div class="map-atooltip">Kuwait: Regardless of age, British nationals travelling by air can get a free 30-day entry permit/tourist visa, or a 90-day visit/business visa for a fee, on arrival. The immigration authorities may ask to see evidence of return or onward travel, a sponsor\'s letter and hotel confirmation.<br><br>If you are arriving by land or sea, you should obtain visas in advance from the Kuwaiti Embassy in London. It is possible to obtain an eVisa.</div>');
           } else if (code == 'bs') {
@@ -1826,6 +1839,10 @@
     <a href="/" id="title">British Citizen Tourist Map</a> <span id="subtitle" class="hidden-xs">Entry requirements for
       <abbr title="People with a full 'British Citizen' passport.">British citizens</abbr> who want to travel the
       world.</span> <span id="header-right" class="hidden-xs"><span id="count">0</span> Locations</span>
+  </div>
+  <div id="notice">
+    This map is updated manually and does not include COVID travel restrictions due to their
+    ever-changing nature.
   </div>
   <noscript>
     <div id="noscript">
