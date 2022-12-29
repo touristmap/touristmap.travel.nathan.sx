@@ -342,7 +342,7 @@
         "NO": no_visa,
         "NP": visa_on_arrival,
         "NZ": evisa,
-        "OM": evisa,
+        "OM": no_visa_less_than_one_month,
         "PA": no_visa,
         "PE": no_visa,
         "PG": visa_on_arrival,
@@ -1199,7 +1199,7 @@
           } else if (code == 'ir') {
             label.html('<div class="map-tooltip">Iran: Need a visa.</div>');
           } else if (code == 'om') {
-            label.html('<div class="map-tooltip">Oman: Need a visa. Oman stopped issuing visas on arrival in February 2019. In November 2019 Oman authorities announced that all visitors should obtain an eVisa in advance and that visas on arrival would be granted only as an exception.</div>');
+            label.html('<div class="map-tooltip">Oman: Allowed to stay 14 days without a visa.</div>');
           } else if (code == 'ye') {
             label.html('<div class="map-tooltip">Yemen: Need a visa. If you\'re staying for more than 14 days you\'ll need to register your passport after arrival in country with the Yemen immigration authorities. Special permission is needed for travel outside Sana\'a or Aden.</div>');
           } else if (code == 'sa') {
