@@ -87,7 +87,7 @@
       text-align: center;
     }
 
-    @media screen and (min-width: 992px) {
+    @media screen and (min-width: 1024px) and (max-width: 1439px) {
       #vmap {
         left: 0;
         right: 0;
@@ -97,13 +97,23 @@
       }
     }
 
-    @media screen and (min-width: 1920px) {
+    @media screen and (min-width: 1440px) {
       #vmap {
         left: 0;
         right: 0;
         top: 0;
         bottom: 0;
         height: 800px !important;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      #vmap {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 500px !important;
       }
     }
 
