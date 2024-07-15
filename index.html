@@ -395,7 +395,7 @@
         "TD": visa,
         "TF": visa,
         "TG": evisa,
-        "TH": no_visa_less_than_one_month,
+        "TH": no_visa,
         "TJ": evisa,
         "TL": visa_on_arrival,
         "TM": visa,
@@ -1161,7 +1161,7 @@
         onRegionTipShow: function (e, label, code) {
           code = code.toLowerCase();
           if (code == 'th') {
-            label.html('<div class="map-tooltip">Thailand: British passport holders arriving by air or land can enter Thailand for 30 days without a visa - this is known as a visa exemption. If you need to stay longer, it\'s possible to extend your stay once, from the expiry date of the original visa, for up to 30 days. It is possible to obtain an eVisa.</div>');
+            label.html('<div class="map-tooltip">Thailand: No visa needed for 60 days. It is possible to obtain an eVisa.</div>');
           } else if (code == 'my') {
             label.html('<div class="map-tooltip">Malaysia: Allowed to stay 90 days without a visa.</div>');
           } else if (code == 'id') {
