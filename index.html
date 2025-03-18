@@ -316,7 +316,7 @@
         "IE": no_visa,
         "IL": evisa,
         "IN": evisa,
-        "IQ": visa_on_arrival,
+        "IQ": evisa,
         "IR": visa,
         "IS": no_visa,
         "IT": no_visa,
@@ -395,7 +395,7 @@
         "TD": evisa,
         "TF": visa,
         "TG": evisa,
-        "TH": no_visa,
+        "TH": no_visa_less_than_one_month,
         "TJ": evisa,
         "TL": visa_on_arrival,
         "TM": visa,
@@ -1161,7 +1161,7 @@
         onRegionTipShow: function (e, label, code) {
           code = code.toLowerCase();
           if (code == 'th') {
-            label.html('<div class="map-tooltip">Thailand: No visa needed for 60 days. It is possible to obtain an eVisa.</div>');
+            label.html('<div class="map-tooltip">Thailand: No visa needed for 30 days. It is possible to obtain an eVisa.</div>');
           } else if (code == 'my') {
             label.html('<div class="map-tooltip">Malaysia: Allowed to stay 90 days without a visa.</div>');
           } else if (code == 'id') {
@@ -1227,7 +1227,7 @@
           } else if (code == 'qa') {
             label.html('<div class="map-tooltip">Qatar: 30 day visa waiver. If you hold another type of British passport you need a visa.</div>');
           } else if (code == 'iq') {
-            label.html('<div class="map-tooltip">Iraq: Visa on arrival. It is possible to obtain an eVisa.</div>');
+            label.html('<div class="map-tooltip">Iraq: Need a visa. It is possible to obtain an eVisa.</div>');
           } else if (code == 'kg') {
             label.html('<div class="map-tooltip">Kyrgyzstan: Allowed to stay 60 days without a visa.</div>');
           } else if (code == 'uz') {
