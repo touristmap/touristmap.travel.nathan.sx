@@ -266,7 +266,7 @@
         "CI": evisa,
         "CL": no_visa,
         "CM": visa,
-        "CN": visa,
+        "CN": no_visa_less_than_one_month,
         "CO": no_visa,
         "CR": no_visa,
         "CU": evisa,
@@ -316,7 +316,7 @@
         "JO": visa_on_arrival,
         "JP": no_visa,
         "KE": evisa,
-        "KG": no_visa,
+        "KG": no_visa_less_than_one_month,
         "KH": visa_on_arrival,
         "KP": evisa,
         "KR": evisa,
@@ -1159,7 +1159,7 @@
           } else if (code == 'id') {
             label.html('<div class="map-tooltip">Indonesia: Visas can be purchased on arrival valid for 30 days, extendable once for a maximum of 30 days.</div>');
           } else if (code == 'cn') {
-            label.html('<div class="map-tooltip">China: Need a visa.</div>');
+            label.html('<div class="map-tooltip">China: Allowed to stay 30 days without a visa (until 31 December 2026).</div>');
           } else if (code == 'bn') {
             label.html('<div class="map-tooltip">Brunei: Allowed to stay 90 days without a visa.</div>');
           } else if (code == 'kh') {
@@ -1221,7 +1221,7 @@
           } else if (code == 'iq') {
             label.html('<div class="map-tooltip">Iraq: Need a visa. It is possible to obtain an eVisa.</div>');
           } else if (code == 'kg') {
-            label.html('<div class="map-tooltip">Kyrgyzstan: Allowed to stay 60 days without a visa.</div>');
+            label.html('<div class="map-tooltip">Kyrgyzstan: Allowed to stay 30 days without a visa.</div>');
           } else if (code == 'uz') {
             label.html('<div class="map-tooltip">Uzbekistan: Allowed to stay 30 days without a visa.</div>');
           } else if (code == 'ge') {
