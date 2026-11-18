@@ -265,7 +265,7 @@
         "CH": no_visa,
         "CI": evisa,
         "CL": no_visa,
-        "CM": visa,
+        "CM": evisa,
         "CN": no_visa_less_than_one_month,
         "CO": no_visa,
         "CR": no_visa,
@@ -300,7 +300,7 @@
         "GT": no_visa,
         "GW": visa_on_arrival,
         "GY": no_visa,
-        "HN": visa,
+        "HN": no_visa,
         "HR": no_visa,
         "HT": no_visa,
         "HU": no_visa,
@@ -341,14 +341,14 @@
         "MN": no_visa_less_than_one_month,
         "MR": evisa,
         "MT": no_visa,
-        "MW": no_visa_less_than_one_month,
+        "MW": visa_on_arrival,
         "MX": no_visa,
         "MY": no_visa,
-        "MZ": no_visa_less_than_one_month,
+        "MZ": evisa,
         "NA": evisa,
         "NC": no_visa,
         "NE": visa,
-        "NG": visa,
+        "NG": evisa,
         "NI": no_visa,
         "NL": no_visa,
         "NO": no_visa,
@@ -378,7 +378,7 @@
         "SK": no_visa,
         "SL": visa_on_arrival,
         "SN": no_visa,
-        "SO": visa_on_arrival,
+        "SO": evisa,
         "SS": evisa,
         "SR": evisa,
         "SV": no_visa,
@@ -499,9 +499,9 @@
         }
       }, {
         latLng: [-4.61, 55.45],
-        name: 'Seychelles: Although Seychelles is a visa-free country, you must hold an onward or return ticket, have confirmed accommodation, and have sufficient funds for duration of your stay.',
+        name: 'Seychelles: ETA required. Although Seychelles is a visa-free country, you must hold an onward or return ticket, have confirmed accommodation, and have sufficient funds for duration of your stay.',
         style: {
-          fill: no_visa
+          fill: evisa
         }
       }, {
         latLng: [7.35, 134.46],
@@ -1255,9 +1255,9 @@
           } else if (code == 'td') {
             label.html('<div class="map-tooltip">Chad: Need a visa. It is possible to obtain an eVisa.</div>');
           } else if (code == 'ng') {
-            label.html('<div class="map-tooltip">Nigeria: Need a visa.</div>');
+            label.html('<div class="map-tooltip">Nigeria: Need a visa. It is possible to obtain an eVisa.</div>');
           } else if (code == 'cm') {
-            label.html('<div class="map-tooltip">Cameroon: Need a visa.</div>');
+            label.html('<div class="map-tooltip">Cameroon: Need a visa. It is possible to obtain an eVisa.</div>');
           } else if (code == 'ke') {
             label.html('<div class="map-tooltip">Kenya: From 1 January 2021, all visas to Kenya are issued online and are no longer available on arrival.</div>');
           } else if (code == 'cf') {
@@ -1305,7 +1305,7 @@
           } else if (code == 'sv') {
             label.html('<div class="map-atooltip">El Salvador: Allowed to stay 180 days without a visa.</div>');
           } else if (code == 'hn') {
-            label.html('<div class="map-atooltip">Honduras: Visa required from August 2024.</div>');
+            label.html('<div class="map-atooltip">Honduras: Allowed to stay 90 days without a visa.</div>');
           } else if (code == 'ni') {
             label.html('<div class="map-atooltip">Nicaragua: Allowed to stay 90 days without a visa. You may be refused entry if you don\'t have an onward ticket out of Nicaragua.</div>');
           } else if (code == 'cr') {
@@ -1411,7 +1411,7 @@
           } else if (code == 'xs') {
             label.html('<div class="map-atooltip">Somaliland: Visa on arrival. You can get a single entry visa, valid for one month, on arrival in Somaliland for US$60 in cash.</div>');
           } else if (code == 'so') {
-            label.html('<div class="map-atooltip">Somalia: Need a visa. If you arrive at Mogadishu International Airport, you can get a single entry visa, valid for one month, for US$60 in cash. It it possible to obtain an eVisa.</div>');
+            label.html('<div class="map-atooltip">Somalia: Need a visa. It it possible to obtain an eVisa.</div>');
           } else if (code == 'il') {
             label.html('<div class="map-atooltip">Israel: From January 2025 must obtain an ETA online.</div>');
           } else if (code == 'ps') {
@@ -1447,7 +1447,7 @@
           } else if (code == 'gy') {
             label.html('<div class="map-atooltip">Guyana: Allowed to stay 90 days without a visa at the discretion of the immigration officer. Extensions can usually be obtained from the Ministry of Home Affairs in Georgetown.</div>');
           } else if (code == 'mw') {
-            label.html('<div class="map-atooltip">Malawi: Allowed to stay 30 days without a visa. It is possible to obtain an eVisa.</div>');
+            label.html('<div class="map-atooltip">Malawi: Visa on arrival. It is possible to obtain an eVisa.<</div>');
           } else if (code == 'lk') {
             label.html('<div class="map-atooltip">Sri Lanka: Need a visa. Although it\'s possible to get a tourist visa on arrival, ETA is also required. It is possible to obtain an eVisa.</div>');
           } else if (code == 'mx') {
@@ -1495,7 +1495,7 @@
           } else if (code == 'jo') {
             label.html('<div class="map-atooltip">Jordan: You\'ll need a visa to enter Jordan. You can get a single entry visa valid for 1 month on arrival at the airports or the Sheikh Hussein/North Border crossing at the Jordan/Israel border. Check with the Jordanian authorities if you\'re planning to cross the Wadi Araba/south border crossing (Aqaba/Eilat) or the Allenby/King Hussein Bridge. An exit tax, currently 10JD, is payable at all border crossings, except the airports. If you wish to combine travel to Jordan with a visit to Israel and the Occupied Palestinian Territories, it\'s usually better to get a multiple entry visa before you travel from the Embassy of the Hashemite Kingdom of Jordan in London. You can extend your visa after you arrive in Jordan up to a maximum period of 6 months. If you overstay your visa you will be fined. If you\'re entering for tourism you can get a combination of a visa and reduced cost entry to the major tourism sites by applying for a Jordan Pass online. You must undergo an HIV test if you intend to stay in Jordan for more than 30 days, either as a resident or as a long-term visitor. The fee to obtain the health certificate is currently 20 Jordanian Dinars.</div>');
           } else if (code == 'mz') {
-            label.html('<div class="map-atooltip">Mozambique: Allowed to stay 30 days without a visa BUT travellers pay a processing fee of 650 MT on arrival by cash or card. A return or onward ticket and a hotel reservation confirmation is required. In addition, 30 days extension is possible. It is possible to obtain an eVisa.</div>');
+            label.html('<div class="map-atooltip">Mozambique: ETA needed for 30 days by paying a tax fee of 48 USD. A return or onward ticket and a hotel reservation confirmation is required. In addition, 30 days extension is possible.</div>');
           } else if (code == 'zm') {
             label.html('<div class="map-atooltip">Zambia: As of 1st November 2022 British passport holders do not need a visa to visit Zambia for up to 90 days.</div>');
           } else if (code == 'tm') {
